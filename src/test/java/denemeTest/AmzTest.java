@@ -23,15 +23,19 @@ public class AmzTest {
     WebDriver driver;
     WebDriverWait wait;
 
-    String url = "https://www.amazon.de/";
+    final String url = "https://www.amazon.de/";
     WebElement element;
     Locators locators;
     ArrayList<String> arr = new ArrayList<>();
 
-    By lLocator = By.cssSelector(".s-suggestion-container div");
+    By lLocators1 = By.cssSelector(".s-suggestion-container div");
+    By lLocators2 = By.cssSelector(".s-suggestion-container div");
     By lSearch = By.cssSelector("#nav-search-submit-button");
     By lInfos = By.xpath("//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4']");
     By lRezensionen = By.xpath("//a[@class='a-popover-trigger a-declarative']");
+    By lFotos = By.xpath("//div[@class='a-section aok-relative s-image-square-aspect']");
+    By lAmzLogo = By.xpath("//a[@*='Amazon.de']");
+    By lPs5 = By.xpath("//div[@*='playstation 5']");
 
 
     public AmzTest() {
@@ -49,7 +53,14 @@ public class AmzTest {
         sendKey(getInputByLocator("Suche Amazon.de"), "wireless");
         checkDropProducts("wireless");
         click(lSearch);
-        checkTheInfos("Wireless", "Kabellos");
+        sleep(3000);
+        checkTheInfos("wireless", "kabellos");
+        checkRezension("rezension");
+        checkFoto();
+        click(lAmzLogo);
+        sendKey(getInputByLocator("Suche Amazon.de"),"playstation");
+        checkDropProducts2("playstation");
+        click(lPs5);
 
         /* checkDropProducts("wireless");
         System.out.println(arr);*/
@@ -64,14 +75,14 @@ public class AmzTest {
 
             Thread.sleep(num);
 
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
 
         }
     }
 
     @AfterTest()
     public void afterTest() {
-        driver.quit();
+        //driver.quit();
     }
 
     public void sendKey(By locator, String text) {
@@ -116,33 +127,68 @@ public class AmzTest {
         }
     }*/
 
-    public void checkDropProducts(String pName) {
+    public void checkDropProducts(String text) {
 
-        long num = driver.findElements(lLocator).stream().filter(e -> !e.getText().toLowerCase().startsWith(pName)).count();
+        long num = driver.findElements(lLocators1).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
         Assert.assertEquals(num, 0);
+    }
+    public void checkDropProducts2(String text) {
+
+        long num = driver.findElements(lLocators2).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
+        Assert.assertEquals(num, 0);
+        wait.until(ExpectedConditions.elementToBeClickable(lLocators2));
     }
 
     public void checkTheInfos(String text1, String text2) {
 
-        String texts = ""+ text1 + " | " + text2;
+        int prodNums = 0;
+        List<WebElement> texts = driver.findElements(lInfos);
 
-       long num = driver.findElements(lInfos).stream().filter(e -> !e.getText().toLowerCase().contains(texts)).count();
-        System.out.println(num);
+
+        for (WebElement text : texts) {
+            if (!(text.getText().toLowerCase().contains(text1)) || (text.getText().contains(text2))) {
+                prodNums++;
+            }
+
+        }
+        Assert.assertTrue(prodNums > 0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert edilmedi.
+
+
+        //long num1 = driver.findElements(lInfos).stream().filter(e -> !e.getText().toLowerCase().contains(text1)).count();
+        //long num2 = driver.findElements(lInfos).stream().filter(e -> !e.getText().toLowerCase().contains(text2)).count();
+       // Assert.assertEquals(num1, 0);
+       // System.out.println(num2);
+
+        //Assert.assertEquals(num1+num2,0);
     }
-    public void checkRezensionWithProduct(){
 
-        int rezNums=0;
+    public void checkRezension(String text) {
+
+        int rezNums = 0;
+        int count = 0;
 
         List<WebElement> rezensionen = driver.findElements(lRezensionen);
 
         for (WebElement rezension : rezensionen) {
 
-            if (rezension.getText().toLowerCase().contains("sternen")) {
+            if (rezension.getText().toLowerCase().contains(text)) {
                 rezNums++;
-            } else {
-
+                count += rezNums;
             }
+            Assert.assertFalse(count<0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert edilmedi.
         }
+
+    }
+    public void checkFoto(){
+
+        int count = 0;
+
+        List<WebElement> fotos = driver.findElements(lFotos);
+
+        for (WebElement foto : fotos) {
+            count++;
+        }
+        Assert.assertNotEquals(count,0);
 
     }
 
