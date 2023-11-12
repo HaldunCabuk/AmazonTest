@@ -26,16 +26,18 @@ public class AmzTest {
     final String url = "https://www.amazon.de/";
     WebElement element;
     Locators locators;
-    ArrayList<String> arr = new ArrayList<>();
 
-    By lLocators1 = By.cssSelector(".s-suggestion-container div");
-    By lLocators2 = By.cssSelector(".s-suggestion-container div");
+
+    By lDdMenuProds = By.cssSelector(".s-suggestion-container div");
+
     By lSearch = By.cssSelector("#nav-search-submit-button");
     By lInfos = By.xpath("//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4']");
     By lRezensionen = By.xpath("//a[@class='a-popover-trigger a-declarative']");
     By lFotos = By.xpath("//div[@class='a-section aok-relative s-image-square-aspect']");
     By lAmzLogo = By.xpath("//a[@*='Amazon.de']");
     By lPs5 = By.xpath("//div[@*='playstation 5']");
+    By lPs5s = By.xpath("//div[@class='a-section']/div");
+    By lPs5Fotos = By.xpath("//div[@class='a-section aok-relative s-image-fixed-height']");
 
 
     public AmzTest() {
@@ -51,16 +53,22 @@ public class AmzTest {
         driver.get(url);
         wait.until(ExpectedConditions.titleContains("Amazon")); // assert title
         sendKey(getInputByLocator("Suche Amazon.de"), "wireless");
-        checkDropProducts("wireless");
+        checkDropProducts("wireless",lDdMenuProds);
         click(lSearch);
         sleep(3000);
-        checkTheInfos("wireless", "kabellos");
-        checkRezension("rezension");
-        checkFoto();
+        checkTheInfos("wireless", "kabellos",lInfos);
+        checkRezension();
+        checkFoto(lFotos);
         click(lAmzLogo);
         sendKey(getInputByLocator("Suche Amazon.de"),"playstation");
-        checkDropProducts2("playstation");
+        checkDropProducts("playstation",lDdMenuProds);
         click(lPs5);
+        checkTheInfos("ps5","playstation 5",lPs5s);
+        checkRezension();
+        checkFoto(lPs5Fotos);
+        sendKey(getInputByLocator("Suche Amazon.de"),"akflscnfjiriophzp");
+        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(lDdMenuProds,1));//Dropdownmenunun cikmadigi teyit edildi
+
 
         /* checkDropProducts("wireless");
         System.out.println(arr);*/
@@ -127,22 +135,19 @@ public class AmzTest {
         }
     }*/
 
-    public void checkDropProducts(String text) {
-
-        long num = driver.findElements(lLocators1).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
+    public void checkDropProducts(String text, By locator) {
+        // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi assert edildi
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        long num = driver.findElements(locator).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
         Assert.assertEquals(num, 0);
-    }
-    public void checkDropProducts2(String text) {
 
-        long num = driver.findElements(lLocators2).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
-        Assert.assertEquals(num, 0);
-        wait.until(ExpectedConditions.elementToBeClickable(lLocators2));
     }
 
-    public void checkTheInfos(String text1, String text2) {
+
+    public void checkTheInfos(String text1, String text2, By locator) {
 
         int prodNums = 0;
-        List<WebElement> texts = driver.findElements(lInfos);
+        List<WebElement> texts = driver.findElements(locator);
 
 
         for (WebElement text : texts) {
@@ -151,7 +156,7 @@ public class AmzTest {
             }
 
         }
-        Assert.assertTrue(prodNums > 0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert edilmedi.
+        Assert.assertFalse(prodNums <= 0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert edilmedi.
 
 
         //long num1 = driver.findElements(lInfos).stream().filter(e -> !e.getText().toLowerCase().contains(text1)).count();
@@ -162,33 +167,34 @@ public class AmzTest {
         //Assert.assertEquals(num1+num2,0);
     }
 
-    public void checkRezension(String text) {
+    public void checkRezension() {
 
         int rezNums = 0;
-        int count = 0;
+
 
         List<WebElement> rezensionen = driver.findElements(lRezensionen);
 
         for (WebElement rezension : rezensionen) {
 
-            if (rezension.getText().toLowerCase().contains(text)) {
+            if (rezension.getText().toLowerCase().contains("rezension")) {
                 rezNums++;
-                count += rezNums;
+
             }
-            Assert.assertFalse(count<0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert edilmedi.
+            Assert.assertFalse(rezNums < 0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert edilmedi.
         }
 
     }
-    public void checkFoto(){
+    public void checkFoto(By locator){
 
         int count = 0;
 
-        List<WebElement> fotos = driver.findElements(lFotos);
+        List<WebElement> fotos = driver.findElements(locator);
 
         for (WebElement foto : fotos) {
             count++;
         }
-        Assert.assertNotEquals(count,0);
+        Assert.assertNotEquals(count,0);//Amz sayfasindaki urun aciklamalari,
+                           //kundenrezensionlari ve fotolari ile esletirilecekti ancak sayilarda surekli degisiklik var.
 
     }
 
