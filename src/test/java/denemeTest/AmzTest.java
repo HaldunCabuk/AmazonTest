@@ -69,6 +69,7 @@ public class AmzTest {
         sendKey(getInputByLocator("Suche Amazon.de"),"akflscnfjiriophzp");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(lDdMenuProds));//Dropdownmenunun cikmadigi teyit edildi
         click(lSearch);
+        sleep(3000);
         isTextVisible("abcdefg");
 
         /* checkDropProducts("wireless");
@@ -132,12 +133,12 @@ public class AmzTest {
 
     public boolean isTextVisible(String text){
 
-        String xpath = "//span[contains(text(),'%s')]";
+        String xpath = "//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')]";
 
-        By lConcatedText =  By.xpath(String.format(xpath,text));
+        By lConceitedText =  By.xpath(String.format(xpath,text));
 
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(lConcatedText));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
             return true;
         }catch(Exception e){
             return false;
