@@ -1,9 +1,8 @@
 package denemeTest;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -66,9 +65,11 @@ public class AmzTest {
         checkTheInfos("ps5","playstation 5",lPs5s);
         checkRezension();
         checkFoto(lPs5Fotos);
+        clear(getInputByLocator("Suche Amazon.de"));
         sendKey(getInputByLocator("Suche Amazon.de"),"akflscnfjiriophzp");
-        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(lDdMenuProds,1));//Dropdownmenunun cikmadigi teyit edildi
-
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(lDdMenuProds));//Dropdownmenunun cikmadigi teyit edildi
+        click(lSearch);
+        isTextVisible("abcdefg");
 
         /* checkDropProducts("wireless");
         System.out.println(arr);*/
@@ -129,6 +130,21 @@ public class AmzTest {
 
     }
 
+    public boolean isTextVisible(String text){
+
+        String xpath = "//span[contains(text(),'%s')]";
+
+        By lConcatedText =  By.xpath(String.format(xpath,text));
+
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(lConcatedText));
+            return true;
+        }catch(Exception e){
+            return false;
+        }
+
+    }
+
    /* public void checkDropProducts() {
         for (WebElement product : locators.products) {
             System.out.println(product.getText());
@@ -180,7 +196,8 @@ public class AmzTest {
                 rezNums++;
 
             }
-            Assert.assertFalse(rezNums < 0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert edilmedi.
+            Assert.assertFalse(rezNums < 0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert etmek
+                                                // yerine musteri oylamalarinin sayfada olup olmadigi check edildi.
         }
 
     }
@@ -196,6 +213,13 @@ public class AmzTest {
         Assert.assertNotEquals(count,0);//Amz sayfasindaki urun aciklamalari,
                            //kundenrezensionlari ve fotolari ile esletirilecekti ancak sayilarda surekli degisiklik var.
 
+    }
+    public WebElement getElement(By locator){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public void clear(By locator){
+       wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).clear();
     }
 
 }
