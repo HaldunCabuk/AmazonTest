@@ -14,7 +14,7 @@ public class BasePage extends BaseSteps {
 
     WebElement element;
 
-    public void sleep(int num) throws InterruptedException {
+    public void sleep(int num) {
 
         try {
 
@@ -58,6 +58,7 @@ public class BasePage extends BaseSteps {
 
     public void checkDropProductsVisible(String text, By locator) {
         // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi assert edildi
+
         long num = driver.findElements(locator).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
         Assert.assertEquals(num, 0);
 
@@ -67,17 +68,9 @@ public class BasePage extends BaseSteps {
 
         List<WebElement> prods = driver.findElements(locator);
 
-        for (int i = 0; i < prods.size(); i++) {
-
-            List<WebElement> product = (List<WebElement>) driver.findElements(locator).stream().filter(e -> !e.getText().toLowerCase().startsWith(text));
-
-            if (product.contains(text)){
-
-                WebElement element = prods.get(i);
-                wait.until(ExpectedConditions.elementToBeClickable(element));
-            }
-
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        long num = driver.findElements(locator).stream().filter(e -> e.getText().toLowerCase().startsWith(text)).count();
+        Assert.assertEquals(num, prods.size());
 
 
     }
@@ -173,7 +166,7 @@ public class BasePage extends BaseSteps {
             int prodNums = 0;
             List<WebElement> texts = driver.findElements(lInfos);
             for (WebElement text : texts) {
-                if (!(text.getText().toLowerCase().contains(text1)) || (text.getText().contains(text2))) {
+                if ((text.getText().toLowerCase().contains(text1)) | (text.getText().contains(text2))) {
                     prodNums++;
                 }
 
@@ -185,9 +178,10 @@ public class BasePage extends BaseSteps {
                 int prodNums = 0;
                 List<WebElement> texts = driver.findElements(lPs5s);
                 for (WebElement text : texts) {
-                    if (!(text.getText().toLowerCase().contains(text1)) || (text.getText().contains(text2))) {
+                    if ((text.getText().toLowerCase().contains(text1)) | (text.getText().contains(text2))) {
                         prodNums++;
                     }
+
                 }
                 Assert.assertFalse(prodNums <= 0);
             }catch (Exception f){
@@ -225,10 +219,10 @@ public class BasePage extends BaseSteps {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(lConceitedText));
 
     }
-    public WebElement clickByString(String text) throws InterruptedException {
+    public WebElement clickByString(String text) {
         String xpath = "//div[@*='%s']";
         By lConceitedText = By.xpath(String.format(xpath,text));
-        sleep(2000);
+        sleep(1700);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
     }
 }

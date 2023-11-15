@@ -28,6 +28,7 @@ public class MyTest extends BaseSteps {
     public void ichSchreibeInWeissemSuchfeldDerEnthältDenText(String text1, String text2) {
 
         bp.sendKey(bp.getInputByLocator(text1), text2);
+        bp.sleep(3000);
 
     }
 

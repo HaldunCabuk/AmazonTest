@@ -50,29 +50,30 @@ public class AmzTest {
 
     @Test
     public void aaa() throws InterruptedException {
-        driver.get(url);
-        wait.until(ExpectedConditions.titleContains("Amazon")); // assert title
-        sendKey(getInputByLocator("Suche Amazon.de"), "wireless");
-        checkDropProducts("wireless", lDdMenuProds);
-        click(lSearch);
+        driver.get(url);//++
+        wait.until(ExpectedConditions.titleContains("Amazon")); // assert title ++
+        sendKey(getInputByLocator("Suche Amazon.de"), "wireless");//++
+        checkDropProducts("wireless", lDdMenuProds);//++
+        checkDropProductsClickable("wireless", lDdMenuProds);//++
+        click(lSearch);//++
         sleep(3000);
-        checkTheInfos("wireless", "kabellos", lInfos);
+        checkTheInfos("qqq", "xxx", lInfos);
         checkRezension();
         checkFoto(lFotos);
         click(lAmzLogo);
-        sendKey(getInputByLocator("Suche Amazon.de"), "playstation");
-        checkDropProducts("playstation", lDdMenuProds);
-        click(lPs5);
+        sendKey(getInputByLocator("Suche Amazon.de"), "playstation");//++
+        checkDropProducts("playstation", lDdMenuProds);//++
+        click(lPs5);//++
         checkTheInfos("ps5", "playstation 5", lPs5s);
         checkRezension();
         checkFoto(lPs5Fotos);
-        clear(getInputByLocator("Suche Amazon.de"));
-        sendKey(getInputByLocator("Suche Amazon.de"), "akflscnfjiriophzp");
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(lDdMenuProds));//Dropdownmenunun cikmadigi teyit edildi
-        click(lSearch);
+        clear(getInputByLocator("Suche Amazon.de"));//++
+        sendKey(getInputByLocator("Suche Amazon.de"), "akflscnfjiriophzp");//++
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(lDdMenuProds));//++Dropdownmenunun cikmadigi teyit edildi
+        click(lSearch);//++
         sleep(3000);
-        TextIsVisible("für");
-        TextIsNotVisible("xxxxxxxxxxx");
+        TextIsVisible("Keine Ergebnisse");//++
+        TextIsNotVisible("xxxxxxxxxxx");//++
 
         /* checkDropProducts("wireless");
         System.out.println(arr);*/
@@ -80,6 +81,26 @@ public class AmzTest {
         //Assert.assertTrue(locators.products.size()>0);
 
     }
+
+    public void checkDropProducts(String text, By locator) {
+        // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi assert edildi
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        long num = driver.findElements(locator).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
+        Assert.assertEquals(num, 0);
+
+    }
+
+
+    public void checkDropProductsClickable(String text, By locator) {
+
+        List<WebElement> prods = driver.findElements(locator);
+
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        long num = driver.findElements(locator).stream().filter(e -> e.getText().toLowerCase().startsWith(text)).count();
+        Assert.assertEquals(num, prods.size());
+
+    }
+
 
     public void sleep(int num) throws InterruptedException {
         try {
@@ -134,7 +155,7 @@ public class AmzTest {
 
     public void TextIsVisible(String text) {
 
-        String xpath = String.valueOf(lText);
+        String xpath = "//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')]";
 
         By lConceitedText = By.xpath(String.format(xpath, text));
 
@@ -142,6 +163,7 @@ public class AmzTest {
 
 
     }
+
     public void TextIsNotVisible(String text) {
 
         String xpath = "//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')]";
@@ -159,14 +181,6 @@ public class AmzTest {
         }
     }*/
 
-    public void checkDropProducts(String text, By locator) {
-        // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi assert edildi
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
-        long num = driver.findElements(locator).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
-        Assert.assertEquals(num, 0);
-
-    }
-
 
     public void checkTheInfos(String text1, String text2, By locator) {
 
@@ -175,7 +189,7 @@ public class AmzTest {
 
 
         for (WebElement text : texts) {
-            if (!(text.getText().toLowerCase().contains(text1)) || (text.getText().contains(text2))) {
+            if ((text.getText().toLowerCase().contains(text1)) & (text.getText().contains(text2))) {
                 prodNums++;
             }
 
