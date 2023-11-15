@@ -92,12 +92,12 @@ public class AmzTest {
 
 
     public void checkDropProductsClickable(String text, By locator) {
-
+        // bu metodda acilan dropmenudeki optionlarin clickable olup olmadigi ve sayisi sorgulandi.
         List<WebElement> prods = driver.findElements(locator);
 
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         long num = driver.findElements(locator).stream().filter(e -> e.getText().toLowerCase().startsWith(text)).count();
-        Assert.assertEquals(num, prods.size());
+        Assert.assertEquals(num, 10);
 
     }
 

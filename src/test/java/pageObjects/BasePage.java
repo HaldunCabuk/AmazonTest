@@ -57,20 +57,20 @@ public class BasePage extends BaseSteps {
     }
 
     public void checkDropProductsVisible(String text, By locator) {
-        // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi assert edildi
-
+        // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi sayisal olarak assert edildi
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         long num = driver.findElements(locator).stream().filter(e -> !e.getText().toLowerCase().startsWith(text)).count();
         Assert.assertEquals(num, 0);
 
     }
 
-    public void checkDropProductsClickable(String text, By locator) {
-
+    public void checkDropProductsClickable(String text, By locator, int nums) {
+        // bu metodda acilan dropmenudeki optionlarin clickable olup olmadigi ve sayisi sorgulandi.
         List<WebElement> prods = driver.findElements(locator);
 
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         long num = driver.findElements(locator).stream().filter(e -> e.getText().toLowerCase().startsWith(text)).count();
-        Assert.assertEquals(num, prods.size());
+        Assert.assertEquals(num, nums);
 
 
     }
@@ -92,7 +92,7 @@ public class BasePage extends BaseSteps {
     }
 
     public void TextIsVisible(String text, int index) {
-
+        // Ortak locatorlardan index nosundaki text iceriginin sorgusu yapildi
         String xpath = "(//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')])['" + index + "']";
 
         By lConceitedText = By.xpath(String.format(xpath, text));
@@ -102,6 +102,7 @@ public class BasePage extends BaseSteps {
     }
 
     public void checkFotos() {
+        //Farkli locatorlarin gosterdigi urunlerin ayni metod icerisindeki foto mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//div[@class='a-section aok-relative s-image-square-aspect'])[1]");
         By locator2 = By.xpath("(//div[@class='a-section aok-relative s-image-fixed-height'])[1]");
         try {
@@ -133,6 +134,7 @@ public class BasePage extends BaseSteps {
 
 
     public void checkTheInfos() {
+        //Farkli locatorlarin gosterdigi urunlerin ayni metod icerisindeki beschreibung mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]");
         By locator2 = By.xpath("(//div[@class='a-section']/div)[1]");
        try {
@@ -158,6 +160,7 @@ public class BasePage extends BaseSteps {
     }
 
     public void checkTheInfosWithKeywords(String text1, String text2) {
+        ////Farkli locatorlarin gosterdigi urunlerin ayni metod icerisinde VEYA kistasina gore KeywordBeschreibung mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]");
         By locator2 = By.xpath("(//div[@class='a-section']/div)[1]");
 

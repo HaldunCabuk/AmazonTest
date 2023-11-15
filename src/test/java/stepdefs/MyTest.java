@@ -28,7 +28,7 @@ public class MyTest extends BaseSteps {
     public void ichSchreibeInWeissemSuchfeldDerEnthältDenText(String text1, String text2) {
 
         bp.sendKey(bp.getInputByLocator(text1), text2);
-        bp.sleep(3000);
+        bp.sleep(1700);
 
     }
 
@@ -42,11 +42,11 @@ public class MyTest extends BaseSteps {
     @And("In diesem Dropdown-Menu, {string} beginnende Producktüberschrifften sollten klickbar sein.")
     public void inDiesemDropdownMenuBeginnendeProducktüberschrifftenSolltenKlickbarSein(String text) {
 
-        bp.checkDropProductsClickable(text,lDdMenuProds);
+        bp.checkDropProductsClickable(text,lDdMenuProds,10);
     }
 
     @When("ich klicke die suchtaste.")
-    public void ichKlickeDieSuchtaste() throws InterruptedException {
+    public void ichKlickeDieSuchtaste() {
 
         click(bp.getElement(lSearch));
         bp.sleep(3000);
