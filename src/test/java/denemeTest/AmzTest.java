@@ -28,6 +28,7 @@ public class AmzTest {
 
 
     By lDdMenuProds = By.cssSelector(".s-suggestion-container div");
+    By lText = By.xpath("//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')]");
 
     By lSearch = By.cssSelector("#nav-search-submit-button");
     By lInfos = By.xpath("//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4']");
@@ -52,31 +53,31 @@ public class AmzTest {
         driver.get(url);
         wait.until(ExpectedConditions.titleContains("Amazon")); // assert title
         sendKey(getInputByLocator("Suche Amazon.de"), "wireless");
-        checkDropProducts("wireless",lDdMenuProds);
+        checkDropProducts("wireless", lDdMenuProds);
         click(lSearch);
         sleep(3000);
-        checkTheInfos("wireless", "kabellos",lInfos);
+        checkTheInfos("wireless", "kabellos", lInfos);
         checkRezension();
         checkFoto(lFotos);
         click(lAmzLogo);
-        sendKey(getInputByLocator("Suche Amazon.de"),"playstation");
-        checkDropProducts("playstation",lDdMenuProds);
+        sendKey(getInputByLocator("Suche Amazon.de"), "playstation");
+        checkDropProducts("playstation", lDdMenuProds);
         click(lPs5);
-        checkTheInfos("ps5","playstation 5",lPs5s);
+        checkTheInfos("ps5", "playstation 5", lPs5s);
         checkRezension();
         checkFoto(lPs5Fotos);
         clear(getInputByLocator("Suche Amazon.de"));
-        sendKey(getInputByLocator("Suche Amazon.de"),"akflscnfjiriophzp");
+        sendKey(getInputByLocator("Suche Amazon.de"), "akflscnfjiriophzp");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(lDdMenuProds));//Dropdownmenunun cikmadigi teyit edildi
         click(lSearch);
         sleep(3000);
-        isTextVisible("abcdefg");
+        TextIsVisible("für");
+        TextIsNotVisible("xxxxxxxxxxx");
 
         /* checkDropProducts("wireless");
         System.out.println(arr);*/
         //wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector(".s-suggestion-container div"),0));
         //Assert.assertTrue(locators.products.size()>0);
-
 
     }
 
@@ -131,18 +132,24 @@ public class AmzTest {
 
     }
 
-    public boolean isTextVisible(String text){
+    public void TextIsVisible(String text) {
+
+        String xpath = String.valueOf(lText);
+
+        By lConceitedText = By.xpath(String.format(xpath, text));
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
+
+
+    }
+    public void TextIsNotVisible(String text) {
 
         String xpath = "//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')]";
 
-        By lConceitedText =  By.xpath(String.format(xpath,text));
 
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
-            return true;
-        }catch(Exception e){
-            return false;
-        }
+        By lConceitedText = By.xpath(String.format(xpath, text));
+
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(lConceitedText));
 
     }
 
@@ -178,8 +185,8 @@ public class AmzTest {
 
         //long num1 = driver.findElements(lInfos).stream().filter(e -> !e.getText().toLowerCase().contains(text1)).count();
         //long num2 = driver.findElements(lInfos).stream().filter(e -> !e.getText().toLowerCase().contains(text2)).count();
-       // Assert.assertEquals(num1, 0);
-       // System.out.println(num2);
+        // Assert.assertEquals(num1, 0);
+        // System.out.println(num2);
 
         //Assert.assertEquals(num1+num2,0);
     }
@@ -198,11 +205,12 @@ public class AmzTest {
 
             }
             Assert.assertFalse(rezNums < 0);// sayi bazen degisiyor. bu nedenle belirli bir sayi assert etmek
-                                                // yerine musteri oylamalarinin sayfada olup olmadigi check edildi.
+            // yerine musteri oylamalarinin sayfada olup olmadigi check edildi.
         }
 
     }
-    public void checkFoto(By locator){
+
+    public void checkFoto(By locator) {
 
         int count = 0;
 
@@ -211,16 +219,17 @@ public class AmzTest {
         for (WebElement foto : fotos) {
             count++;
         }
-        Assert.assertNotEquals(count,0);//Amz sayfasindaki urun aciklamalari,
-                           //kundenrezensionlari ve fotolari ile esletirilecekti ancak sayilarda surekli degisiklik var.
+        Assert.assertNotEquals(count, 0);//Amz sayfasindaki urun aciklamalari,
+        //kundenrezensionlari ve fotolari ile esletirilecekti ancak sayilarda surekli degisiklik var.
 
     }
-    public WebElement getElement(By locator){
+
+    public WebElement getElement(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public void clear(By locator){
-       wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).clear();
+    public void clear(By locator) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).clear();
     }
 
 }

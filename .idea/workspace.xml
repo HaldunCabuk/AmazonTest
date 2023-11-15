@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/Browsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/PropertyReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Utilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefs/BaseSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefs/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/dataFiles/Config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -34,70 +52,76 @@
     </option>
   </component>
   <component name="ProjectId" id="2XxPYgEYU1RnY5zqSpXCHlIt9QW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.AmzTest (1)">
-    <configuration name="AmzTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources\dataFiles" />
+      <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources\features" />
+      <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.Runner">
+    <configuration name="Scenario: test (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" />
+      <option name="GLUE" value="stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AmazonTest" />
+      <option name="NAME_FILTER" value="^test$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^test$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: test" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="denemeTest.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="denemeTest" />
-      <option name="MAIN_CLASS_NAME" value="denemeTest.AmzTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AmzTest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: test" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/test.feature" />
+      <option name="GLUE" value="stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AmazonTest" />
+      <option name="NAME_FILTER" value="^test$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^test$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: test" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="denemeTest.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="denemeTest" />
-      <option name="MAIN_CLASS_NAME" value="denemeTest.AmzTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AmzTest (3)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AmazonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="denemeTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="denemeTest" />
-      <option name="MAIN_CLASS_NAME" value="denemeTest.AmzTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AmzTest (5)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AmzTest (4)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AmazonTest" />
       <extension name="coverage">
         <pattern>
@@ -132,13 +156,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Runner" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AmazonTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.Runner" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AmzTest (1)" />
+        <item itemvalue="TestNG.Runner" />
+        <item itemvalue="Cucumber Java.Scenario: test (1)" />
+        <item itemvalue="Cucumber Java.Scenario: test" />
         <item itemvalue="TestNG.AmzTest.aaa" />
-        <item itemvalue="TestNG.AmzTest (5)" />
-        <item itemvalue="TestNG.AmzTest (3)" />
-        <item itemvalue="TestNG.AmzTest (2)" />
+        <item itemvalue="TestNG.AmzTest (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699799539912</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="AmazonTest">
+      <created>1699801685548</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699801685548</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
