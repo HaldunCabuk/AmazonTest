@@ -102,7 +102,7 @@ public class BasePage extends BaseSteps {
     }
 
     public void checkFotos() {
-        //Farkli locatorlarin gosterdigi urunlerin ayni metod icerisindeki foto mevcudiyetleri sorgulandi.
+        //Farkli locatorlara ait urunlerin foto mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//div[@class='a-section aok-relative s-image-square-aspect'])[1]");
         By locator2 = By.xpath("(//div[@class='a-section aok-relative s-image-fixed-height'])[1]");
         try {

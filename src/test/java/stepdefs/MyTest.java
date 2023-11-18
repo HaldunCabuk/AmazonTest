@@ -19,29 +19,26 @@ public class MyTest extends BaseSteps {
         driver.navigate().to(PropertyReader.read("Config").get("url"));
     }
 
-    @Then("ich sollte den {string} title sehen.")
-    public void ichSollteDenTitleSehen(String text) {
+    @Then("ich sehe title {string}")
+    public void ichSeheTitle(String text) {
         bp.titleContains(text);
+
     }
 
-    @When("ich schreibe in weissem Suchfeld der {string} enthält, den text {string}.")
-    public void ichSchreibeInWeissemSuchfeldDerEnthältDenText(String text1, String text2) {
+    @When("ich schreibe im Suchfeld der {string} enthält, den text {string}.")
+    public void ichSchreibeImSuchfeldDerEnthältDenText(String text1, String text2) {
 
         bp.sendKey(bp.getInputByLocator(text1), text2);
         bp.sleep(1700);
-
     }
 
-
-    @Then("In einem Dropdown-Menu, {string} beginnende Producktüberschrifften sollten sichtbar sein.")
-    public void inEinemDropdownMenuBeginnendeProducktüberschrifftenSolltenSichtbarSein(String text) {
-
+    @Then("ich sehe im Dropdown-Menu {string} beginnende Producktüberschrifften")
+    public void ichSeheImDropdownMenuBeginnendeProducktüberschrifften(String text) {
         bp.checkDropProductsVisible(text,lDdMenuProds);
     }
 
-    @And("In diesem Dropdown-Menu, {string} beginnende Producktüberschrifften sollten klickbar sein.")
-    public void inDiesemDropdownMenuBeginnendeProducktüberschrifftenSolltenKlickbarSein(String text) {
-
+    @And("ich sehe im Dropdown-Menu {string} beginnende Producktüberschrifften als klickbar")
+    public void ichSeheImDropdownMenuBeginnendeProducktüberschrifftenAlsKlickbar(String text) {
         bp.checkDropProductsClickable(text,lDdMenuProds,10);
     }
 
@@ -58,7 +55,6 @@ public class MyTest extends BaseSteps {
 
         bp.TextIsVisible(text);
 
-
     }
 
     @And("ich sollte unter dem navbar {string} text sehen dazu.")
@@ -67,62 +63,62 @@ public class MyTest extends BaseSteps {
         bp.TextIsVisible(text);
     }
 
-    @And("in der mitte der seite {string} haupttitel sollte sichtbar sein.")
-    public void inDerMitteDerSeiteHaupttitelSollteSichtbarSein(String text) {
+    @And("ich sehe {string} haupttitel.")
+    public void ichSeheInDerMitteDerSeiteHaupttitel(String text) {
 
         bp.TextIsVisible(text,2);
     }
 
-    @Then("unter dem Ergebnisse titel sollte ich die kleine fotos, beschreibungen und Kundenrezensionen sehen.")
-    public void unterDemErgebnisseTitelSollteIchDieKleineFotosBeschreibungenUndKundenrezensionenSehen() {
+    @And("ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen")
+    public void ichSeheUnterDerErgebnisseTitelDieKleineFotosBeschreibungenUndKundenrezensionen() {
+
         bp.checkFotos();
         bp.checkTheInfos();
         bp.checkRezension();
-
     }
 
-
-    @And("unter dem Ergebnisse titel Produkte sollten {string} oder {string} sein.")
-    public void unterDemErgebnisseTitelProdukteSolltenOderSein(String text1, String text2) {
+    @And("ich sehe unter dem Ergebnisse haupttitel {string} oder {string} Produkte.")
+    public void ichSeheUnterDemErgebnisseHaupttitelOderProdukte(String text1, String text2) {
 
         bp.checkTheInfosWithKeywords(text1,text2);
     }
 
-    @When("ich klicke auf das Amazon.de Logo ganz oben links.")
-    public void ichKlickeAufDasAmazonDeLogoGanzObenLinks() {
+
+
+    @When("ich klicke auf das Amazon.de Logo.")
+    public void ichKlickeAufDasAmazonDeLogo() {
         click(lAmzLogo);
-
     }
 
-    @And("unter dem navbar {string} text nicht sichtbar sein.")
-    public void unterDemNavbarTextNichtSichtbarSein(String text) {
+    @And("ich sehe nicht unter dem navbar {string} text")
+    public void ichSeheNichtUnterDemNavbarText(String text) {
+
         bp.TextIsNotVisible(text,1);
-
     }
 
 
-    @When("ich gebe {string} wort statt playstation fünf wort in weissem Suchfeld ein.")
-    public void ichGebeAkflscnfjiriophzpWortStattPlaystationFünfWortInWeissemSuchfeldEin(String text) {
+    @When("ich gebe {string} wort statt playstation fünf wort im Suchfeld ein.")
+    public void ichGebeWortStattPlaystationFünfWortImSuchfeldEin(String text) {
 
         bp.clear(bp.getInputByLocator("Suche Amazon.de"));
         bp.sendKey(bp.getInputByLocator("Suche Amazon.de"), text);
     }
 
-    @Then("Kein Dropdown-Menu sollte sichtbar sein.")
-    public void keinDropdownMenuSollteSichtbarSein() {
+    @Then("ich sehe kein Dropdown-Menu")
+    public void ichSeheKeinDropdownMenu() {
+
         waitForInvisibility(lDdMenuProds);
     }
 
-    @Then("{string} text sollte sichtbar sein.")
-    public void textSollteSichtbarSein(String text) {
+    @Then("ich sehe {string} text.")
+    public void ichSeheText(String text) {
+
         bp.TextIsVisible(text);
     }
 
-
     @And("ich klicke {string} auf im DropdownMenu.")
-    public void ichKlickeAufImDropdownMenu(String text) throws InterruptedException {
+    public void ichKlickeAufImDropdownMenu(String text) {
       bp.clickByString(text).click();
     }
-
 
 }

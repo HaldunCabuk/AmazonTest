@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 
 public interface Locators {
     By lDdMenuProds = By.cssSelector(".s-suggestion-container div");
-
     By lSearch = By.cssSelector("#nav-search-submit-button");
     By lInfos = By.xpath("//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4']");
     By lRezensionen = By.xpath("//a[@class='a-popover-trigger a-declarative']");
