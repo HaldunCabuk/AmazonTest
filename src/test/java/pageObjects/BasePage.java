@@ -1,14 +1,18 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import stepdefs.BaseSteps;
 
 import static pageObjects.Locators.*;
 
 import java.util.List;
+
 
 public class BasePage extends BaseSteps {
 
@@ -80,7 +84,7 @@ public class BasePage extends BaseSteps {
     }
 
 
-    public void TextIsVisible(String text) {
+    public void textIsVisible(String text) {
 
         String xpath = "//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')]";
 
@@ -91,7 +95,8 @@ public class BasePage extends BaseSteps {
 
     }
 
-    public void TextIsVisible(String text, int index) {
+
+    public void textIsVisible(String text, int index) {
         // Ortak locatorlardan index nosundaki text iceriginin sorgusu yapildi
         String xpath = "(//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')])['" + index + "']";
 
@@ -101,19 +106,19 @@ public class BasePage extends BaseSteps {
 
     }
 
-    public void checkFotos() {
+    public void checkTheFotos() {
         //Farkli locatorlara ait urunlerin foto mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//div[@class='a-section aok-relative s-image-square-aspect'])[1]");
         By locator2 = By.xpath("(//div[@class='a-section aok-relative s-image-fixed-height'])[1]");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
             int count = 0;
-            List<WebElement> fotos = driver.findElements(lFotos);
+            List<WebElement> fotos = driver.findElements(lPhotos);
             for (WebElement foto : fotos) {
                 count++;
             }
             Assert.assertNotEquals(count, 0);
-        }catch (Exception e){
+        } catch (Exception e) {
             try {
 
                 wait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
@@ -123,7 +128,7 @@ public class BasePage extends BaseSteps {
                     count++;
                 }
                 Assert.assertNotEquals(count, 0);
-            }catch (Exception f){
+            } catch (Exception f) {
                 f.printStackTrace();
             }
         } //Amz sayfasindaki urun fotolari,
@@ -132,31 +137,50 @@ public class BasePage extends BaseSteps {
 
     }
 
+    public void checkPhotos() {
+
+        int count = 0;
+        List<WebElement> fotos = driver.findElements(lPhotos);
+        for (WebElement foto : fotos) {
+            count++;
+        }
+        Assert.assertNotEquals(count, 0);
+
+    }
+
 
     public void checkTheInfos() {
         //Farkli locatorlarin gosterdigi urunlerin ayni metod icerisindeki beschreibung mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]");
         By locator2 = By.xpath("(//div[@class='a-section']/div)[1]");
-       try {
-           wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
-           wait.until(driver -> {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
+            wait.until(driver -> {
 
-               if (driver.findElements(lInfos).size() > 0) return true;
-               return false;
-           }); // sayi bazen degisiyor. bu nedenle Beschreibung larin mevcudiyeti sorgulandi.
-       }catch (Exception e){
-           try {
-               wait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
-               wait.until(driver -> {
+                if (driver.findElements(lInfos).size() > 0) return true;
+                return false;
+            }); // sayi bazen degisiyor. bu nedenle Beschreibung larin mevcudiyeti sorgulandi.
+        } catch (Exception e) {
+            try {
+                wait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
+                wait.until(driver -> {
 
-                   if (driver.findElements(lPs5s).size() > 0) return true;
-                   return false;
-               });
-           }catch (Exception f){
-               f.printStackTrace();
-           }
-       }
+                    if (driver.findElements(lPs5s).size() > 0) return true;
+                    return false;
+                });
+            } catch (Exception f) {
+                f.printStackTrace();
+            }
+        }
 
+    }
+
+    public void checkInfos() {
+
+        wait.until(driver -> {
+            if (driver.findElements(lInfos).size() > 0) return true;
+            return false;
+        });
     }
 
     public void checkTheInfosWithKeywords(String text1, String text2) {
@@ -175,7 +199,7 @@ public class BasePage extends BaseSteps {
 
             }
             Assert.assertFalse(prodNums <= 0);
-        }catch (Exception e){
+        } catch (Exception e) {
             try {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
                 int prodNums = 0;
@@ -187,14 +211,15 @@ public class BasePage extends BaseSteps {
 
                 }
                 Assert.assertFalse(prodNums <= 0);
-            }catch (Exception f){
+            } catch (Exception f) {
                 f.printStackTrace();
             }
         }
 
 
-}
-    public void checkRezension() {
+    }
+
+    public void checkTheRezension() {
 
         int rezNums = 0;
 
@@ -212,7 +237,43 @@ public class BasePage extends BaseSteps {
         }
 
     }
-    public void TextIsNotVisible(String text, int index) {
+
+    public void checkRezensionen() {
+
+        wait.until(driver -> {
+            if (driver.findElements(lRezensionens).size() > 0) return true;
+            return false;
+        });
+
+    }
+
+    public void checkPrices() {
+
+        List<WebElement> prices = driver.findElements(lPrices);
+
+        // Checked both product prices and assets were queried.
+
+        for (int i = 0; i < prices.size(); i++) {
+            element = prices.get(i);
+            String str = element.getText();
+            String s = str.replaceAll("[^0-9]", "").substring(0, 2);
+            int a = Integer.parseInt(s);
+            Assert.assertFalse(a < 0);
+        }
+
+
+    }
+
+    public void checkLieferungInfos() {
+        wait.until(driver -> {
+            if (driver.findElements(lLieferungInfos).size() > 0) return true;
+            return false;
+        });
+
+
+    }
+
+    public void textIsNotVisible(String text, int index) {
 
         String xpath = "(//div[@class='sg-col-inner' and //div[@class='a-row']]//span[contains(text(),'%s')])['" + index + "']";
 
@@ -222,10 +283,91 @@ public class BasePage extends BaseSteps {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(lConceitedText));
 
     }
+
     public WebElement clickByString(String text) {
+
         String xpath = "//div[@*='%s']";
-        By lConceitedText = By.xpath(String.format(xpath,text));
+        By lConceitedText = By.xpath(String.format(xpath, text));
         sleep(1700);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
     }
+    public WebElement clickByString(String text,String wanted){
+
+        By lConceitedText = By.xpath(String.format(text, wanted));
+        return wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
+    }
+
+    public void checkClickableOf(String text, String wanted) {
+
+        By lConceitedText = By.xpath(String.format(text, wanted));
+        wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
+    }
+    public void checkDdOptionsVisibility(){
+        List<WebElement> elements = driver.findElements(lSelectOptions);
+
+        for (int i = 0; i < elements.size(); i++) {
+            element = elements.get(i);
+            wait.until(ExpectedConditions.visibilityOf(element));
+        }
+
+    }
+
+    public void checkDdOptionsClickable(){
+        List<WebElement> elements = driver.findElements(lSelectOptions);
+
+        for (int i = 0; i < elements.size(); i++) {
+            element = elements.get(i);
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+        }
+    }
+
+   /* public WebElement aaa(String text){
+
+        List<WebElement> elements = driver.findElements(lSelectOptions);
+        WebElement elm;
+        WebElement wantedElement = null;
+
+        for (int i = 0; i < elements.size(); i++) {
+            elm = elements.get(i);
+            if (elm.getText().contains(text)){
+                 wantedElement = elements.get(i);
+                break;
+            }
+
+        }
+
+        return wait.until(ExpectedConditions.visibilityOf(wantedElement));
+    }*/
+
+    /*public void select(String text,int num){
+        new Select(aaa(text)).selectByIndex(num);
+    }*/
+
+    public void clickDdOptionbyAction(String text){
+
+        List<WebElement> elements = driver.findElements(lSelectOptions);
+        WebElement elm;
+        WebElement wantedElement = null;
+        int num = 0;
+
+        for (int i = 0; i < elements.size(); i++) {
+            elm = elements.get(i);
+            num++;
+            if (elm.getText().contains(text)){
+                wantedElement = elements.get(i);
+                break;
+            }
+
+        }
+
+
+        for (int i = 0; i < num; i++) {
+           new Actions(driver).keyDown(Keys.ARROW_DOWN).perform();
+
+        }
+
+        wait.until(ExpectedConditions.visibilityOf(wantedElement)).click();
+    }
+
 }
+

@@ -42,39 +42,38 @@ public class MyTest extends BaseSteps {
         bp.checkDropProductsClickable(text,lDdMenuProds,10);
     }
 
-    @When("ich klicke die suchtaste.")
-    public void ichKlickeDieSuchtaste() {
+    @When("ich klicke auf die suchtaste.")
+    public void ichKlickeAufDieSuchtaste() {
 
         click(bp.getElement(lSearch));
         bp.sleep(3000);
     }
 
-
     @Then("ich sollte unter dem navbar {string} sehen.")
     public void ichSollteUnterDemNavbarSehen(String text) {
 
-        bp.TextIsVisible(text);
+        bp.textIsVisible(text);
 
     }
 
     @And("ich sollte unter dem navbar {string} text sehen dazu.")
     public void ichSollteUnterDemNavbarTextSehenDazu(String text) {
 
-        bp.TextIsVisible(text);
+        bp.textIsVisible(text);
     }
 
     @And("ich sehe {string} haupttitel.")
     public void ichSeheInDerMitteDerSeiteHaupttitel(String text) {
 
-        bp.TextIsVisible(text,2);
+        bp.textIsVisible(text,2);
     }
 
     @And("ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen")
     public void ichSeheUnterDerErgebnisseTitelDieKleineFotosBeschreibungenUndKundenrezensionen() {
 
-        bp.checkFotos();
+        bp.checkTheFotos();
         bp.checkTheInfos();
-        bp.checkRezension();
+        bp.checkTheRezension();
     }
 
     @And("ich sehe unter dem Ergebnisse haupttitel {string} oder {string} Produkte.")
@@ -93,7 +92,7 @@ public class MyTest extends BaseSteps {
     @And("ich sehe nicht unter dem navbar {string} text")
     public void ichSeheNichtUnterDemNavbarText(String text) {
 
-        bp.TextIsNotVisible(text,1);
+        bp.textIsNotVisible(text,1);
     }
 
 
@@ -113,12 +112,13 @@ public class MyTest extends BaseSteps {
     @Then("ich sehe {string} text.")
     public void ichSeheText(String text) {
 
-        bp.TextIsVisible(text);
+        bp.textIsVisible(text);
     }
 
     @And("ich klicke {string} auf im DropdownMenu.")
     public void ichKlickeAufImDropdownMenu(String text) {
       bp.clickByString(text).click();
     }
+
 
 }

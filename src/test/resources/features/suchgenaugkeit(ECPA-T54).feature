@@ -7,7 +7,7 @@ Feature: Verbesserte Suchgenauigkeit
     When ich schreibe im Suchfeld der "Suche Amazon.de" enthält, den text "wireless".
     Then ich sehe im Dropdown-Menu "wireless" beginnende Producktüberschrifften
     And ich sehe im Dropdown-Menu "wireless" beginnende Producktüberschrifften als klickbar
-    When ich klicke die suchtaste.
+    When ich klicke auf die suchtaste.
     Then ich sehe unter dem Ergebnisse haupttitel "wireless" oder "kabellos" Produkte.
     Then ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen
     Then ich sollte unter dem navbar "Ergebnissen oder Vorschlägen für" sehen.
@@ -27,7 +27,10 @@ Feature: Verbesserte Suchgenauigkeit
     And ich sehe "Ergebnisse" haupttitel.
     Then ich gebe "akflscnfjiriophzp" wort statt playstation fünf wort im Suchfeld ein.
     And ich sehe kein Dropdown-Menu
-    When ich klicke die suchtaste.
+    When ich klicke auf die suchtaste.
     Then ich sehe "Keine Ergebnisse" text.
     And  ich sehe nicht unter dem navbar "Ergebnissen oder Vorschlägen für" text
     And ich sehe "Benötigst du Hilfe?" text.
+
+
+

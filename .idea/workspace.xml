@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" afterDir="false" />
     </list>
@@ -67,7 +71,47 @@
       <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Runner">
+  <component name="RunManager" selected="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)">
+    <configuration name="Scenario: ECPA-92 Filterungsoption" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" />
+      <option name="GLUE" value="stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="AmazonTest" />
+      <option name="NAME_FILTER" value="^ECPA\-92 Filterungsoption$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^ECPA\-92 Filterungsoption$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: ECPA-92 Filterungsoption" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" />
+      <option name="GLUE" value="stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="AmazonTest" />
+      <option name="NAME_FILTER" value="^ECPA\-92 Verbesserte suchgenauigkeit\(FilterungsOption\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^ECPA\-92 Verbesserte suchgenauigkeit\(FilterungsOption\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" />
@@ -88,23 +132,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AmzTest (3)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AmazonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="denemeTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="denemeTest" />
-      <option name="MAIN_CLASS_NAME" value="denemeTest.AmzTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AmzTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AmazonTest" />
       <extension name="coverage">
@@ -116,24 +143,6 @@
       <option name="PACKAGE_NAME" value="denemeTest" />
       <option name="MAIN_CLASS_NAME" value="denemeTest.AmzTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AmzTest.aaa" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AmazonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="denemeTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="denemeTest" />
-      <option name="MAIN_CLASS_NAME" value="denemeTest.AmzTest" />
-      <option name="METHOD_NAME" value="aaa" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -159,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" />
         <item itemvalue="TestNG.Runner" />
+        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Filterungsoption" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)" />
         <item itemvalue="TestNG.AmzTest" />
-        <item itemvalue="TestNG.AmzTest.aaa" />
-        <item itemvalue="TestNG.AmzTest (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700065132326</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="AmazonTest">
+      <created>1700295613049</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700295613049</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

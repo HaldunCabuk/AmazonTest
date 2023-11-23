@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = {"src/test/resources/features"},
+        features = {"src/test/resources/features/filterungsoption(ECPA-T71).feature"},
         glue = {"stepdefs"},
         tags = "",
         plugin = {
