@@ -12,17 +12,16 @@ public interface Locators {
     By lPs5s = By.xpath("//div[@class='a-section']/div");
     By lPs5Fotos = By.xpath("//div[@class='a-section aok-relative s-image-fixed-height']");
 
-    // MyTest2 locators begin here
+    // MyTest2 locators begin from here
 
     String lAllTexts ="//*/span[contains(text(),'%s')]";
     String lDdButtonsName = "//div[@class='nav-search-facade']/span[text()='%s']";
     By lSelectOptions = By.xpath("//select[@class='nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown']/option");
-    By lProducts = By.xpath("//div[@data-asin]/div[@class='sg-col-inner']/div[@cel_widget_id]"); //CheckHowManyProductsBeforeTestAsManuall
-
-    By lDdOptions = By.id("searchDropdownBox");
+    By lProducts = By.xpath("//div[@class='a-row a-spacing-mini a-size-base a-color-base']"); //CheckHowManyProductsBeforeTestAsManuall
     By lRezensionens = By.cssSelector(".a-icon.a-icon-star-small.a-star-small-4-5.aok-align-bottom");
     By lPrices = By.xpath("//div[@class='a-row']//span[@class='a-price']");
     By lLieferungInfos = By.xpath("//div[@class='a-row s-align-children-center']");
+    By lSearchButton = By.id("nav-search-submit-button");
 
 
 

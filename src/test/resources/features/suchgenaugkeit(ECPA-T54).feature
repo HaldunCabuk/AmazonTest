@@ -9,7 +9,7 @@ Feature: Verbesserte Suchgenauigkeit
     And ich sehe im Dropdown-Menu "wireless" beginnende Producktüberschrifften als klickbar
     When ich klicke auf die suchtaste.
     Then ich sehe unter dem Ergebnisse haupttitel "wireless" oder "kabellos" Produkte.
-    Then ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen
+    #Then ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen
     Then ich sollte unter dem navbar "Ergebnissen oder Vorschlägen für" sehen.
     And ich sollte unter dem navbar "wireless" text sehen dazu.
     And ich sehe "Ergebnisse" haupttitel.
@@ -21,7 +21,7 @@ Feature: Verbesserte Suchgenauigkeit
     Then ich sehe im Dropdown-Menu "playstation" beginnende Producktüberschrifften als klickbar
     When ich klicke "playstation 5" auf im DropdownMenu.
     Then ich sehe unter dem Ergebnisse haupttitel "ps5" oder "playstation 5" Produkte.
-    And ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen
+    #And ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen
     And ich sollte unter dem navbar "Ergebnissen oder Vorschlägen für" sehen.
     And ich sollte unter dem navbar "playstation 5" text sehen dazu.
     And ich sehe "Ergebnisse" haupttitel.

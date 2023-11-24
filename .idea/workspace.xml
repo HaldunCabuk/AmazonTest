@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +70,7 @@
       <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)">
+  <component name="RunManager" selected="TestNG.Runner">
     <configuration name="Scenario: ECPA-92 Filterungsoption" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" />
@@ -168,10 +167,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" />
         <item itemvalue="TestNG.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Filterungsoption" />
+        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)" />
+        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Filterungsoption" />
         <item itemvalue="TestNG.AmzTest" />
       </list>
     </recent_temporary>
@@ -255,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700295613049</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="AmazonTest">
+      <created>1700776110243</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700776110243</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

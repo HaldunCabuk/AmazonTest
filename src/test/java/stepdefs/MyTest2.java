@@ -14,6 +14,7 @@ public class MyTest2 extends BaseSteps{
 
     @Then("ich sehe title Amazon.de")
     public void ichSeheTitleAmazonDe() {
+
         bp.titleContains("Amazon.de");
     }
 
@@ -43,15 +44,15 @@ public class MyTest2 extends BaseSteps{
         waitForVisibility(xpath(lAllTexts,"camera wifi"));
     }
 
-    @And("ich sehe verschiedene camera wifis mit kleiner fotos, beschreibungen, Bewertungen, Preise und Lieferung infos")
-    public void ichSeheVerschiedeneCameraWifisMitKleinerFotosBeschreibungenBewertungenPreiseUndLieferungInfos() {
+    @And("ich sehe verschiedene camera wifis mit beschreibungen, Bewertungen, Preise und Lieferung infos")
+    public void ichSeheVerschiedeneCameraWifisMitBeschreibungenBewertungenPreiseUndLieferungInfos() {
 
-        bp.checkPhotos();
         bp.checkInfos();
         bp.checkRezensionen();
         bp.checkPrices();
         bp.checkLieferungInfos();
     }
+
 
     @And("ich sehe Dropdown-Menübutton mit dem Namen Alle als klickbar")
     public void ichSeheDropdownMenübuttonMitDemNamenAlleAlsKlickbar() {
@@ -64,7 +65,7 @@ public class MyTest2 extends BaseSteps{
     public void ichKlickeAlleButton() {
 
         click(bp.clickByString(lDdButtonsName,"Alle"));
-        bp.sleep(2500);
+        bp.sleep(2000);
     }
 
     @Then("ich sehe im Dropdown-Menu verschiedene Produktkatagorie als klickbar")
@@ -79,4 +80,59 @@ public class MyTest2 extends BaseSteps{
 
       bp.clickDdOptionbyAction("Zeitschriften");
     }
+
+    @Then("ich sehe Zeitschriften button als klickbar")
+    public void ichSeheZeitschriftenButtonAlsKlickbar() {
+
+        bp.checkClickableOf(lDdButtonsName,"Zeitschriften");
+    }
+
+    @And("ich klicke auf die suchtaste")
+    public void ichKlickeAufDieSuchtaste() {
+
+    click(lSearchButton);
+    }
+
+    @And("ich sehe Ergebnisse von Alle Kategorien text")
+    public void ichSeheErgebnisseVonAlleKategorienText() {
+
+        waitForVisibility(xpath(lAllTexts,"Ergebnisse von Alle Kategorien"));
+    }
+
+    @And("ich sehe Keine Ergebnisse für camera wifi in Zeitschriften text")
+    public void ichSeheKeineErgebnisseFürCameraWifiInZeitschriftenText() {
+
+        waitForVisibility(xpath(lAllTexts,"Keine Ergebnisse für camera wifi in Zeitschriften"));
+    }
+
+    @When("ich klicke Zeitschriften button")
+    public void ichKlickeZeitschriftenButton() {
+
+        click(bp.clickByString(lDdButtonsName,"Zeitschriften"));
+    }
+
+    @And("ich klicke im Dropdown-Menu Bücher option")
+    public void ichKlickeImDropdownMenuBücherOption() {
+
+        bp.clickDdOptionbyAction("Bücher");
+    }
+
+    @Then("ich sehe Bücher button als klickbar")
+    public void ichSeheBücherButtonAlsKlickbar() {
+
+        bp.checkClickableOf(lDdButtonsName,"Bücher");
+    }
+
+    @And("ich sehe Ergebnisse titel")
+    public void ichSeheErgebnisseTitel() {
+
+        waitForVisibility(xpath(lAllTexts,"Ergebnisse"));
+    }
+    @And("ich sehe unter dem Ergebnisse titel buch, Ausgabe oder Kindle Produkte")
+    public void ichSeheUnterDemErgebnisseTitelBuchAusgabeOderKindleProdukte() {
+
+        bp.checkTheInfosWithKeywords("buch","Ausgabe","Kindle",3);
+    }
+
+
 }

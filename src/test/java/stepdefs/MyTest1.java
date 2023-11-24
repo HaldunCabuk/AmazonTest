@@ -5,12 +5,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.BasePage;
-import stepdefs.BaseSteps;
 import utils.PropertyReader;
 import static pageObjects.Locators.*;
 
 
-public class MyTest extends BaseSteps {
+public class MyTest1 extends BaseSteps {
     BasePage bp = new BasePage();
 
 

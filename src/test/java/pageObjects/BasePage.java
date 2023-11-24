@@ -183,6 +183,26 @@ public class BasePage extends BaseSteps {
         });
     }
 
+    public void checkTheInfosWithKeywords(String text1, String text2, String text3, int num) {
+
+        int prodNums = 0;
+
+        List<WebElement> prods = driver.findElements(lProducts);
+
+        WebElement elm;
+
+        for (int i = 0; i < num; i++) {
+
+            elm = prods.get(i);
+
+            if ((elm.getText().contains(text1)) | (elm.getText().contains(text2) | (elm.getText().contains(text3)))){
+                prodNums++;
+            }
+    }
+
+        Assert.assertEquals(prodNums,num);
+    }
+
     public void checkTheInfosWithKeywords(String text1, String text2) {
         ////Farkli locatorlarin gosterdigi urunlerin ayni metod icerisinde VEYA kistasina gore KeywordBeschreibung mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]");
@@ -215,7 +235,6 @@ public class BasePage extends BaseSteps {
                 f.printStackTrace();
             }
         }
-
 
     }
 
@@ -291,7 +310,8 @@ public class BasePage extends BaseSteps {
         sleep(1700);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
     }
-    public WebElement clickByString(String text,String wanted){
+
+    public WebElement clickByString(String text, String wanted) {
 
         By lConceitedText = By.xpath(String.format(text, wanted));
         return wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
@@ -302,7 +322,8 @@ public class BasePage extends BaseSteps {
         By lConceitedText = By.xpath(String.format(text, wanted));
         wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
     }
-    public void checkDdOptionsVisibility(){
+
+    public void checkDdOptionsVisibility() {
         List<WebElement> elements = driver.findElements(lSelectOptions);
 
         for (int i = 0; i < elements.size(); i++) {
@@ -312,7 +333,7 @@ public class BasePage extends BaseSteps {
 
     }
 
-    public void checkDdOptionsClickable(){
+    public void checkDdOptionsClickable() {
         List<WebElement> elements = driver.findElements(lSelectOptions);
 
         for (int i = 0; i < elements.size(); i++) {
@@ -343,7 +364,7 @@ public class BasePage extends BaseSteps {
         new Select(aaa(text)).selectByIndex(num);
     }*/
 
-    public void clickDdOptionbyAction(String text){
+    public void clickDdOptionbyAction(String text) {
 
         List<WebElement> elements = driver.findElements(lSelectOptions);
         WebElement elm;
@@ -353,7 +374,7 @@ public class BasePage extends BaseSteps {
         for (int i = 0; i < elements.size(); i++) {
             elm = elements.get(i);
             num++;
-            if (elm.getText().contains(text)){
+            if (elm.getText().contains(text)) {
                 wantedElement = elements.get(i);
                 break;
             }
@@ -362,10 +383,11 @@ public class BasePage extends BaseSteps {
 
 
         for (int i = 0; i < num; i++) {
-           new Actions(driver).keyDown(Keys.ARROW_DOWN).perform();
 
+            new Actions(driver).keyDown(Keys.ARROW_DOWN).perform();
         }
 
+        sleep(750);
         wait.until(ExpectedConditions.visibilityOf(wantedElement)).click();
     }
 
