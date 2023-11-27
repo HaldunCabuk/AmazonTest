@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.By;
 
 public interface Locators {
+    By lAcceptCookies = By.id("sp-cc-accept");
     By lDdMenuProds = By.cssSelector(".s-suggestion-container div");
     By lSearch = By.cssSelector("#nav-search-submit-button");
     By lInfos = By.xpath("//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4']");
@@ -11,6 +12,13 @@ public interface Locators {
     By lAmzLogo = By.xpath("//a[@*='Amazon.de']");
     By lPs5s = By.xpath("//div[@class='a-section']/div");
     By lPs5Fotos = By.xpath("//div[@class='a-section aok-relative s-image-fixed-height']");
+
+
+
+    By lAlleHamburger = By.cssSelector(".hm-icon.nav-sprite");
+    By lPrimeVideoButton = By.xpath("(//li//div[text()='Prime Video'])[1]");
+    By lAlleVidButton = By.xpath("//a[text()='Alle Videos']");
+
 
     // MyTest2 locators begin from here
 

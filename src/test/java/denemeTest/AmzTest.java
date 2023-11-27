@@ -10,18 +10,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+import pageObjects.BasePage;
+import utils.PropertyReader;
 
-import static denemeTest.Locators.*;
+import static pageObjects.Locators.*;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
-public class AmzTest {
+public class AmzTest extends BasePage {
 
-    WebDriver driver;
-    WebDriverWait wait;
-
+    /*   WebDriver driver;
+       WebDriverWait wait;
+   */
     final String url = "https://www.amazon.de/";
     WebElement element;
     Locators locators;
@@ -41,46 +42,58 @@ public class AmzTest {
 
 
     public AmzTest() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        /*driver.manage().window().maximize();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));*/
         locators = PageFactory.initElements(driver, Locators.class);
     }
 
 
-    @Test
-    public void aaa() throws InterruptedException {
-        driver.get(url);//++
-        wait.until(ExpectedConditions.titleContains("Amazon")); // assert title ++
-        sendKey(getInputByLocator("Suche Amazon.de"), "wireless");//++
-        checkDropProducts("wireless", lDdMenuProds);//++
-        checkDropProductsClickable("wireless", lDdMenuProds);//++
-        click(lSearch);//++
-        sleep(3000);
-        checkTheInfos("qqq", "xxx", lInfos);
-        checkRezension();
-        checkFoto(lFotos);
-        click(lAmzLogo);
-        sendKey(getInputByLocator("Suche Amazon.de"), "playstation");//++
-        checkDropProducts("playstation", lDdMenuProds);//++
-        click(lPs5);//++
-        checkTheInfos("ps5", "playstation 5", lPs5s);
-        checkRezension();
-        checkFoto(lPs5Fotos);
-        clear(getInputByLocator("Suche Amazon.de"));//++
-        sendKey(getInputByLocator("Suche Amazon.de"), "akflscnfjiriophzp");//++
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(lDdMenuProds));//++Dropdownmenunun cikmadigi teyit edildi
-        click(lSearch);//++
-        sleep(3000);
-        TextIsVisible("Keine Ergebnisse");//++
-        TextIsNotVisible("xxxxxxxxxxx");//++
+    /* @Test
+     public void aaa() throws InterruptedException {
+         driver.get(url);//++
+         wait.until(ExpectedConditions.titleContains("Amazon")); // assert title ++
+         sendKey(getInputByLocator("Suche Amazon.de"), "wireless");//++
+         checkDropProducts("wireless", lDdMenuProds);//++
+         checkDropProductsClickable("wireless", lDdMenuProds);//++
+         click(lSearch);//++
+         sleep(3000);
+         checkTheInfos("qqq", "xxx", lInfos);
+         checkRezension();
+         checkFoto(lFotos);
+         click(lAmzLogo);
+         sendKey(getInputByLocator("Suche Amazon.de"), "playstation");//++
+         checkDropProducts("playstation", lDdMenuProds);//++
+         click(lPs5);//++
+         checkTheInfos("ps5", "playstation 5", lPs5s);
+         checkRezension();
+         checkFoto(lPs5Fotos);
+         clear(getInputByLocator("Suche Amazon.de"));//++
+         sendKey(getInputByLocator("Suche Amazon.de"), "akflscnfjiriophzp");//++
+         wait.until(ExpectedConditions.invisibilityOfElementLocated(lDdMenuProds));//++Dropdownmenunun cikmadigi teyit edildi
+         click(lSearch);//++
+         sleep(3000);
+         TextIsVisible("Keine Ergebnisse");//++
+         TextIsNotVisible("xxxxxxxxxxx");//++
 
-        /* checkDropProducts("wireless");
-        System.out.println(arr);*/
+         *//* checkDropProducts("wireless");
+        System.out.println(arr);*//*
         //wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector(".s-suggestion-container div"),0));
         //Assert.assertTrue(locators.products.size()>0);
 
+    }*/
+    @Test
+    public void test2() {
+        driver.navigate().to(PropertyReader.read("Config").get("url"));
+        acceptCookies(getElement(lAcceptCookies));
+        click(getElement(lAlleHamburger));
+        click(getElement(lPrimeVideoButton));
+        sleep(2000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lAlleVidButton));
+        hoverOverByAction(lAlleVidButton);
+
+
     }
+
 
     public void checkDropProducts(String text, By locator) {
         // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi assert edildi
@@ -102,7 +115,7 @@ public class AmzTest {
     }
 
 
-    public void sleep(int num) throws InterruptedException {
+    public void sleep(int num) {
         try {
 
             Thread.sleep(num);

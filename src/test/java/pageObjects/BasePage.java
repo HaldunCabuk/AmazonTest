@@ -17,6 +17,13 @@ import java.util.List;
 public class BasePage extends BaseSteps {
 
     WebElement element;
+    public void acceptCookies(WebElement element) {
+
+        waitForVisibility(element);
+        if (element.isDisplayed()) {
+            element.click();
+        }
+    }
 
     public void sleep(int num) {
 
@@ -204,9 +211,10 @@ public class BasePage extends BaseSteps {
     }
 
     public void checkTheInfosWithKeywords(String text1, String text2) {
-        ////Farkli locatorlarin gosterdigi urunlerin ayni metod icerisinde VEYA kistasina gore KeywordBeschreibung mevcudiyetleri sorgulandi.
+        //Farkli locatorlarin gosterdigi urunlerin ayni metod icerisinde VEYA kistasina gore KeywordBeschreibung mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]");
-        By locator2 = By.xpath("(//div[@class='a-section']/div)[1]");
+        By locator2 = By.xpath("(//span[@class='a-size-medium a-color-base a-text-normal'])[1]");
+
 
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
@@ -374,7 +382,7 @@ public class BasePage extends BaseSteps {
         for (int i = 0; i < elements.size(); i++) {
             elm = elements.get(i);
             num++;
-            if (elm.getText().contains(text)) {
+            if (elm.getText().equals(text)) {
                 wantedElement = elements.get(i);
                 break;
             }
