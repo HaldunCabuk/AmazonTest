@@ -96,7 +96,7 @@ public class MyTest1 extends BaseSteps {
     }
 
 
-    @When("ich gebe {string} wort statt playstation fünf wort im Suchfeld ein.")
+    @When("ich gebe {string} wort statt playstation 5 wort im Suchfeld ein.")
     public void ichGebeWortStattPlaystationFünfWortImSuchfeldEin(String text) {
 
         bp.clear(bp.getInputByLocator("Suche Amazon.de"));

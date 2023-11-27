@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/filterungsoption" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/denemeTest/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/denemeTest/Locators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" afterDir="false" />
@@ -171,9 +168,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.Runner" />
+        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)" />
         <item itemvalue="TestNG.AmzTest.test2" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" />
-        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Filterungsoption" />
       </list>
     </recent_temporary>
@@ -271,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700833797991</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="AmazonTest">
+      <created>1701103197205</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701103197205</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

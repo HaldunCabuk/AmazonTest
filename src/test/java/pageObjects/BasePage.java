@@ -17,6 +17,7 @@ import java.util.List;
 public class BasePage extends BaseSteps {
 
     WebElement element;
+
     public void acceptCookies(WebElement element) {
 
         waitForVisibility(element);
@@ -77,7 +78,6 @@ public class BasePage extends BaseSteps {
 
     public void checkDropProductsClickable(String text, By locator, int nums) {
         // bu metodda acilan dropmenudeki optionlarin clickable olup olmadigi ve sayisi sorgulandi.
-        List<WebElement> prods = driver.findElements(locator);
 
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         long num = driver.findElements(locator).stream().filter(e -> e.getText().toLowerCase().startsWith(text)).count();
@@ -202,19 +202,18 @@ public class BasePage extends BaseSteps {
 
             elm = prods.get(i);
 
-            if ((elm.getText().contains(text1)) | (elm.getText().contains(text2) | (elm.getText().contains(text3)))){
+            if ((elm.getText().contains(text1)) | (elm.getText().contains(text2) | (elm.getText().contains(text3)))) {
                 prodNums++;
             }
-    }
+        }
 
-        Assert.assertEquals(prodNums,num);
+        Assert.assertEquals(prodNums, num);
     }
 
     public void checkTheInfosWithKeywords(String text1, String text2) {
         //Farkli locatorlarin gosterdigi urunlerin ayni metod icerisinde VEYA kistasina gore KeywordBeschreibung mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]");
         By locator2 = By.xpath("(//span[@class='a-size-medium a-color-base a-text-normal'])[1]");
-
 
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));

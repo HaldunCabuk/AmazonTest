@@ -10,7 +10,7 @@ public interface Locators {
     By lRezensionen = By.xpath("//a[@class='a-popover-trigger a-declarative']");
     By lPhotos = By.xpath("//div[@class='a-section aok-relative s-image-square-aspect']");
     By lAmzLogo = By.xpath("//a[@*='Amazon.de']");
-    By lPs5s = By.xpath("//div[@class='a-section']/div");
+    By lPs5s = By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']");
     By lPs5Fotos = By.xpath("//div[@class='a-section aok-relative s-image-fixed-height']");
 
 
