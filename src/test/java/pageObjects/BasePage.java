@@ -20,7 +20,6 @@ public class BasePage extends BaseSteps {
 
     public void acceptCookies(WebElement element) {
 
-        waitForVisibility(element);
         if (element.isDisplayed()) {
             element.click();
         }
@@ -337,6 +336,7 @@ public class BasePage extends BaseSteps {
     }
 
     public void checkDdOptionsClickable() {
+
         List<WebElement> elements = driver.findElements(lSelectOptions);
 
         for (int i = 0; i < elements.size(); i++) {
