@@ -213,10 +213,9 @@ public class BasePage extends BaseSteps {
     public void checkTheInfosWithKeywords(String text1, String text2) {
         //Farkli locatorlarin gosterdigi urunlerin ayni metod icerisinde VEYA kistasina gore KeywordBeschreibung mevcudiyetleri sorgulandi.
         By locator1 = By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]");
-        By locator2 = By.xpath("(//span[@class='a-size-medium a-color-base a-text-normal'])[1]");
 
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
+        if (driver.findElements(locator1).size() > 0) {
+
             int prodNums = 0;
             List<WebElement> texts = driver.findElements(lInfos);
             for (WebElement text : texts) {
@@ -226,24 +225,21 @@ public class BasePage extends BaseSteps {
 
             }
             Assert.assertFalse(prodNums <= 0);
-        } catch (Exception e) {
-            try {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
-                int prodNums = 0;
-                List<WebElement> texts = driver.findElements(lPs5s);
-                for (WebElement text : texts) {
-                    if ((text.getText().toLowerCase().contains(text1)) | (text.getText().contains(text2))) {
-                        prodNums++;
-                    }
+        } else {
 
+            int prodNums = 0;
+            List<WebElement> texts = driver.findElements(lPs5s);
+            for (WebElement text : texts) {
+                if ((text.getText().toLowerCase().contains(text1)) | (text.getText().contains(text2))) {
+                    prodNums++;
                 }
-                Assert.assertFalse(prodNums <= 0);
-            } catch (Exception f) {
-                f.printStackTrace();
+
             }
+            Assert.assertFalse(prodNums <= 0);
         }
 
     }
+
 
     public void checkTheRezension() {
 
