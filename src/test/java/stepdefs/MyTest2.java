@@ -34,7 +34,7 @@ public class MyTest2 extends BaseSteps{
     @And("ich klicke camera wifi")
     public void ichKlickeCameraWifi() {
 
-        click(bp.clickByString("camera wifi"));
+        click(bp.getElementWithConcat("camera wifi"));
     }
 
     @Then("ich sehe Ergebnissen oder Vorschlägen für camera wifi text")

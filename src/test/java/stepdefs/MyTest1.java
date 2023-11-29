@@ -117,7 +117,7 @@ public class MyTest1 extends BaseSteps {
 
     @And("ich klicke {string} auf im DropdownMenu.")
     public void ichKlickeAufImDropdownMenu(String text) {
-      bp.clickByString(text).click();
+      bp.getElementWithConcat(text).click();
     }
 
 

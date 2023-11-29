@@ -305,11 +305,11 @@ public class BasePage extends BaseSteps {
 
     }
 
-    public WebElement clickByString(String text) {
+    public WebElement getElementWithConcat(String text) {
 
         String xpath = "//div[@*='%s']";
         By lConceitedText = By.xpath(String.format(xpath, text));
-        sleep(1700);
+        sleep(800);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
     }
 
