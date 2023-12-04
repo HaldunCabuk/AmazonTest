@@ -94,6 +94,18 @@ public class AmzTest extends BasePage {
 
     }
 
+    @Test
+    public void test3(){ // Onemli -> DropDown Menu acildi mi diye baktigimiz adimlar
+        By locator = By.cssSelector("#nav-search-dropdown-card > div");
+        driver.navigate().to(PropertyReader.read("Config").get("url"));
+        click(locator);
+        wait.until(ExpectedConditions.attributeContains(locator,"class","nav-focus"));
+
+
+
+
+    }
+
 
     public void checkDropProducts(String text, By locator) {
         // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi assert edildi

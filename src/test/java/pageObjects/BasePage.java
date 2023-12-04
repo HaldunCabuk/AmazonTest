@@ -1,8 +1,6 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -40,6 +38,29 @@ public class BasePage extends BaseSteps {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
     }
+
+
+    // Said Hocanin Stale element hatasi cozumu//
+
+  /*  public WebElement relocateStaleElement(WebElement element, By by)
+    {
+        return element = Driver.getDriver().findElement(by);
+    }
+*/
+
+    public void click(WebElement element){
+        wait.until(driver ->{
+            try {
+                element.click();
+                return true;
+            }catch (StaleElementReferenceException e){
+                return false;
+            }catch (Exception e){
+                return false;
+            }
+        });
+    }
+
 
     public void titleContains(String text) {
         wait.until(ExpectedConditions.titleContains(text));
@@ -366,6 +387,7 @@ public class BasePage extends BaseSteps {
     /*public void select(String text,int num){
         new Select(aaa(text)).selectByIndex(num);
     }*/
+
 
     public void clickDdOptionbyAction(String text) {
 
