@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/runners/RunnerT71.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT71.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/filterungsoption" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +73,7 @@
       <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AmzTest.test3">
+  <component name="RunManager" selected="TestNG.RunnerT71">
     <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" />
@@ -87,9 +94,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge) (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit2(ECPA-T54).feature" />
       <option name="GLUE" value="stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AmazonTest" />
@@ -103,24 +110,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AmzTest.test2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AmazonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="denemeTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="denemeTest" />
-      <option name="MAIN_CLASS_NAME" value="denemeTest.AmzTest" />
-      <option name="METHOD_NAME" value="test2" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,13 +149,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunnerT71" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AmazonTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.RunnerT71" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AmzTest.test3" />
-        <item itemvalue="TestNG.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)" />
-        <item itemvalue="TestNG.AmzTest.test2" />
+        <item itemvalue="TestNG.RunnerT71" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" />
+        <item itemvalue="TestNG.Runner" />
+        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge) (1)" />
+        <item itemvalue="TestNG.AmzTest.test3" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701335635096</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="AmazonTest">
+      <created>1701717340703</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701717340703</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -3,11 +3,10 @@ package stepdefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
 import pageObjects.BasePage;
 import static pageObjects.Locators.*;
 
-public class MyTest2 extends BaseSteps{
+public class MyTestT71 extends BaseSteps{
     BasePage bp = new BasePage();
 
 
@@ -43,16 +42,6 @@ public class MyTest2 extends BaseSteps{
         waitForVisibility(xpath(lAllTexts,"Ergebnissen oder Vorschlägen für"));
         waitForVisibility(xpath(lAllTexts,"camera wifi"));
     }
-
-    @And("ich sehe verschiedene camera wifis mit beschreibungen, Bewertungen, Preise und Lieferung infos")
-    public void ichSeheVerschiedeneCameraWifisMitBeschreibungenBewertungenPreiseUndLieferungInfos() {
-
-        bp.checkInfos();
-        bp.checkRezensionen();
-        bp.checkPrices();
-        bp.checkLieferungInfos();
-    }
-
 
     @And("ich sehe Dropdown-Menübutton mit dem Namen Alle als klickbar")
     public void ichSeheDropdownMenübuttonMitDemNamenAlleAlsKlickbar() {
@@ -135,4 +124,27 @@ public class MyTest2 extends BaseSteps{
     }
 
 
+    @And("ich sehe verschiedene camera wifi Produkte mit der beschreibungen")
+    public void ichSeheVerschiedeneCameraWifiProdukteMitDerBeschreibungen() {
+
+        bp.checkInfos();
+    }
+
+    @And("ich sehe verschiedene camera wifi Produkte mit der Bewertungen")
+    public void ichSeheVerschiedeneCameraWifiProdukteMitDerBewertungen() {
+
+        bp.checkRezensionen();
+    }
+
+    @And("ich sehe verschiedene camera wifi Produkte mit der Preise")
+    public void ichSeheVerschiedeneCameraWifiProdukteMitDerPreise() {
+
+        bp.checkPrices();
+    }
+
+    @And("ich sehe verschiedene camera wifi Produkte mit der Lieferung infos")
+    public void ichSeheVerschiedeneCameraWifiProdukteMitDerLieferungInfos() {
+
+        bp.checkLieferungInfos();
+    }
 }

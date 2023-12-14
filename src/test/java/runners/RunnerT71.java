@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = {"src/test/resources/features/suchgenaugkeit(ECPA-T54).feature"},
+        features = {"src/test/resources/features/filterungsoption(ECPA-T71).feature"},
         glue = {"stepdefs"},
         tags = "",
         plugin = {
@@ -13,6 +13,6 @@ import io.cucumber.testng.CucumberOptions;
                 "html:test-output/cucumber-reports/cucumberreport.html",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
-public class Runner extends AbstractTestNGCucumberTests {
+public class RunnerT71 extends AbstractTestNGCucumberTests {
 
 }

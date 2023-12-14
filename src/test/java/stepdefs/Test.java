@@ -1,5 +1,6 @@
 package stepdefs;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -25,6 +26,5 @@ public class Test extends BaseSteps{
     public void nachDerKlickSollteDieSuchleisteAmOberenRandDerSeiteAngezeigtWerden() {
         waitForVisibility(homepage.searchBox);
     }
-
 
 }
