@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT71.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT71.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit2(ECPA-T54).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit2(ECPA-T54).feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702564114972</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="AmazonTest">
+      <created>1702564963720</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702564963720</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

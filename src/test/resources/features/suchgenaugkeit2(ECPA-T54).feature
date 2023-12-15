@@ -2,7 +2,7 @@ Feature: Verbesserte Suchgenauigkeit
 
   Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)
 
-    Given ich gehe auf die Amazon.de startseite.
+    Given ich gehe auf die Amazon.de Startseite.
     Then ich sehe title Amazon.de
     When ich schreibe im Suchfeld der Suche Amazon.de enthält, den text wireless
     Then ich sehe im Dropdown-Menu wireless beginnende Producktüberschrifften

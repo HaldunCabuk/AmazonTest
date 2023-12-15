@@ -1,6 +1,7 @@
 package stepdefs;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.BasePage;
@@ -17,7 +18,7 @@ public class MyTestT71 extends BaseSteps{
         bp.titleContains("Amazon.de");
     }
 
-    @When("ich schreibe im suchfeld der Suche Amazon.de enthält, den text camera wifi")
+    @When("ich schreibe im Suchfeld der Suche Amazon.de enthält, den text camera wifi")
     public void ichSchreibeImSuchfeldDerSucheAmazonDeEnthältDenTextCameraWifi() {
 
         bp.sendKey(bp.getInputByLocator("Suche Amazon.de"),"camera wifi");
@@ -30,8 +31,8 @@ public class MyTestT71 extends BaseSteps{
         bp.checkDropProductsVisible("camera wifi",lDdMenuProds);
     }
 
-    @And("ich klicke camera wifi")
-    public void ichKlickeCameraWifi() {
+    @And("ich klicke auf camera wifi")
+    public void ichKlickeAufCameraWifi() {
 
         click(bp.getElementWithConcat("camera wifi"));
     }
@@ -50,13 +51,12 @@ public class MyTestT71 extends BaseSteps{
 
     }
 
-    @When("ich klicke Alle button")
-    public void ichKlickeAlleButton() {
+    @When("ich klicke auf Alle button")
+    public void ichKlickeAufAlleButton() {
 
         click(bp.clickByString(lDdButtonsName,"Alle"));
         bp.sleep(2000);
     }
-
     @Then("ich sehe im Dropdown-Menu verschiedene Produktkatagorie als klickbar")
     public void ichSeheImDropdownMenuVerschiedeneProduktkatagorieAlsKlickbar() {
 
@@ -64,10 +64,10 @@ public class MyTestT71 extends BaseSteps{
         bp.checkDdOptionsClickable();
     }
 
-    @And("ich klicke im Dropdown-Menu Zeitschriften option")
-    public void ichKlickeImDropdownMenuZeitschriftenOption() {
+    @And("Ich klicke im Dropdown-Menü auf die Option Zeitschriften")
+    public void ichKlickeImDropdownMenüAufDieOptionZeitschriften() {
 
-      bp.clickDdOptionbyAction("Zeitschriften");
+        bp.clickDdOptionbyAction("Zeitschriften");
     }
 
     @Then("ich sehe Zeitschriften button als klickbar")
@@ -94,14 +94,14 @@ public class MyTestT71 extends BaseSteps{
         waitForVisibility(xpath(lAllTexts,"Keine Ergebnisse für camera wifi in Zeitschriften"));
     }
 
-    @When("ich klicke Zeitschriften button")
-    public void ichKlickeZeitschriftenButton() {
+    @When("ich klicke auf Zeitschriften button")
+    public void ichKlickeAufZeitschriftenButton() {
 
         click(bp.clickByString(lDdButtonsName,"Zeitschriften"));
     }
 
-    @And("ich klicke im Dropdown-Menu Bücher option")
-    public void ichKlickeImDropdownMenuBücherOption() {
+    @And("ich klicke im Dropdown-Menu auf die Option Bücher")
+    public void ichKlickeImDropdownMenuAufDieOptionBücher() {
 
         bp.clickDdOptionbyAction("Bücher");
     }
@@ -117,8 +117,8 @@ public class MyTestT71 extends BaseSteps{
 
         waitForVisibility(xpath(lAllTexts,"Ergebnisse"));
     }
-    @And("ich sehe unter dem Ergebnisse titel buch, Ausgabe oder Kindle Produkte")
-    public void ichSeheUnterDemErgebnisseTitelBuchAusgabeOderKindleProdukte() {
+    @And("Ich sehe Produkte mit buch, Ausgabe oder Kindle Beschreibungen unter den Ergebnissen.")
+    public void ichSeheProdukteMitBuchAusgabeOderKindleBeschreibungenUnterDenErgebnissen() {
 
         bp.checkTheInfosWithKeywords("buch","Ausgabe","Kindle",3);
     }
@@ -147,4 +147,7 @@ public class MyTestT71 extends BaseSteps{
 
         bp.checkLieferungInfos();
     }
+
+
+
 }

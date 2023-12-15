@@ -12,9 +12,9 @@ import static pageObjects.Locators.*;
 public class MyTest1 extends BaseSteps {
     BasePage bp = new BasePage();
 
-
-    @Given("ich gehe auf die Amazon.de startseite.")
+    @Given("ich gehe auf die Amazon.de Startseite.")
     public void ichGeheAufDieAmazonDeStartseite() {
+
         driver.navigate().to(PropertyReader.read("Config").get("url"));
         bp.acceptCookies(bp.getElement(lAcceptCookies));
     }
