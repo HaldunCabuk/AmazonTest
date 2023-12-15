@@ -6,7 +6,7 @@ public interface Locators {
     By lAcceptCookies = By.id("sp-cc-accept");
     By lDdMenuProds = By.cssSelector(".s-suggestion-container div");
     By lSearch = By.cssSelector("#nav-search-submit-button");
-    By lInfos = By.xpath("//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4']");
+    By lInfos = By.xpath("//h2[contains(@class,'a-color-base')]");
     By lRezensionen = By.xpath("//a[@class='a-popover-trigger a-declarative']");
     By lPhotos = By.xpath("//div[@class='a-section aok-relative s-image-square-aspect']");
     By lAmzLogo = By.xpath("//a[@*='Amazon.de']");
