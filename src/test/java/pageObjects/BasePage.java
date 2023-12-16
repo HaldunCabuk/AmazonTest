@@ -345,6 +345,11 @@ public class BasePage extends BaseSteps {
         By lConceitedText = By.xpath(String.format(text, wanted));
         wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
     }
+    public void checkVisibleOf(String text, String wanted) {
+
+        By lConceitedText = By.xpath(String.format(text, wanted));
+        wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
+    }
 
     public void checkDdOptionsVisibility() {
         List<WebElement> elements = driver.findElements(lSelectOptions);
