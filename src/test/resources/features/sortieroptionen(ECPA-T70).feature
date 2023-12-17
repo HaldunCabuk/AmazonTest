@@ -37,4 +37,4 @@ Feature: Verbesserte Suchgenauigkeit
     And ich sehe Ergebnissen oder Vorschlägen für socken text
     And ich sehe Ergebnisse Titel
     And ich sehe verschiedene socken Produkte mit der Beschreibungen
-    And ich sehe verschiedene socken Produkte mit der Aufsteigende Kundenbewertungen
+    And ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen
