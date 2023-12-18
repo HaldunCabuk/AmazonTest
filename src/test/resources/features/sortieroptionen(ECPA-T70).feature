@@ -8,10 +8,10 @@ Feature: Verbesserte Suchgenauigkeit
     And ich klicke auf die Suchtaste
     Then ich sehe Ergebnissen oder Vorschlägen für socken text
     And ich sehe Ergebnisse Titel
-    #And ich sehe verschiedene socken Produkte mit der Beschreibungen
-    #And ich sehe verschiedene socken Produkte mit der Bewertungen
-    #And ich sehe verschiedene socken Produkte mit der Preise
-    #And ich sehe verschiedene socken Produkte mit der Lieferung infos
+    And ich sehe verschiedene socken Produkte mit der Beschreibungen
+    And ich sehe verschiedene socken Produkte mit der Bewertungen
+    And ich sehe verschiedene socken Produkte mit der Preise
+    And ich sehe verschiedene socken Produkte mit der Lieferung infos
     #And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als sichtbar
     #And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als klickbar
     #When ich klicke auf Sortieren nach:Empfohlen-Button

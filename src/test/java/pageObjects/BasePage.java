@@ -291,7 +291,7 @@ public class BasePage extends BaseSteps {
 
     public void checkPrices() {
 
-        List<WebElement> prices = driver.findElements(lPrices);
+        List<WebElement> prices = driver.findElements(lPrices2);
 
         // Checked both product prices and assets were queried.
 
@@ -300,9 +300,9 @@ public class BasePage extends BaseSteps {
             String str = element.getText();
             String s = str.replaceAll("[^0-9]", "").substring(0, 2);
             int a = Integer.parseInt(s);
+            System.out.println(a);
             Assert.assertFalse(a < 0);
         }
-
 
     }
 

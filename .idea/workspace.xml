@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT70.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT70.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT70.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +68,7 @@
       <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RunnerT70">
+  <component name="RunManager" selected="TestNG.RunnerT71">
     <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/filterungsoption(ECPA-T71).feature" />
@@ -87,15 +89,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge) (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/suchgenaugkeit2(ECPA-T54).feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" />
       <option name="GLUE" value="stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AmazonTest" />
-      <option name="NAME_FILTER" value="^ECPA\-92 Verbesserte suchgenauigkeit\(Genauigkeit der Suche\/SuchVorschläge\)$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^ECPA\-92 Verbesserte suchgenauigkeit\(Genauigkeit der Suche\/SuchVorschläge\)$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)" />
+      <option name="NAME_FILTER" value="^ECPA\-92 Verbesserte suchgenauigkeit\(SortierOptionen\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^ECPA\-92 Verbesserte suchgenauigkeit\(SortierOptionen\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -160,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RunnerT70" />
         <item itemvalue="TestNG.RunnerT71" />
+        <item itemvalue="TestNG.RunnerT70" />
+        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(FilterungsOption)" />
         <item itemvalue="TestNG.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge) (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -366,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702811369989</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="AmazonTest">
+      <created>1702910722231</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702910722231</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
