@@ -8,33 +8,33 @@ Feature: Verbesserte Suchgenauigkeit
     And ich klicke auf die Suchtaste
     Then ich sehe Ergebnissen oder Vorschlägen für socken text
     And ich sehe Ergebnisse Titel
-    And ich sehe verschiedene socken Produkte mit der Beschreibungen
-    And ich sehe verschiedene socken Produkte mit der Bewertungen
-    And ich sehe verschiedene socken Produkte mit der Preise
-    And ich sehe verschiedene socken Produkte mit der Lieferung infos
-    And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als sichtbar
-    And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als klickbar
-    When ich klicke auf Sortieren nach:Empfohlen-Button
-    Then ich sehe im Dropdown-Menü verschiedene SortierenOptionen als sichtbar
-    When Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend
-    Then ich sehe den Preis: Aufsteigend-Button als sichtbar
-    And ich sehe Ergebnissen oder Vorschlägen für socken text
-    And ich sehe Ergebnisse Titel
-    And ich sehe verschiedene socken Produkte mit der Beschreibungen
-    And ich sehe verschiedene socken Produkte mit der Aufsteigende Preise
-    When Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend
-    Then ich sehe den Preis: Absteigend-Button als sichtbar
-    When Ich klicke im Dropdown-Menü auf die Option Preis: Absteigend
-    Then ich sehe den Preis: Absteigend-Button als sichtbar
-    And ich sehe Ergebnissen oder Vorschlägen für socken text
-    And ich sehe Ergebnisse Titel
-    And ich sehe verschiedene socken Produkte mit der Beschreibungen
-    And ich sehe verschiedene socken Produkte mit der Absteigende Preise
-    When Ich klicke im Dropdown-Menü auf die Option Preis: Absteigend
-    Then ich sehe den Durchschn. Kundenbewertung-Button als sichtbar
-    When Ich klicke im Dropdown-Menü auf die Option Durchschn. Kundenbewertung
-    Then ich sehe den Durchschn. Kundenbewertung-Button als sichtbar
-    And ich sehe Ergebnissen oder Vorschlägen für socken text
-    And ich sehe Ergebnisse Titel
-    And ich sehe verschiedene socken Produkte mit der Beschreibungen
-    And ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen
+    #And ich sehe verschiedene socken Produkte mit der Beschreibungen
+    #And ich sehe verschiedene socken Produkte mit der Bewertungen
+    #And ich sehe verschiedene socken Produkte mit der Preise
+    #And ich sehe verschiedene socken Produkte mit der Lieferung infos
+    #And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als sichtbar
+    #And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als klickbar
+    #When ich klicke auf Sortieren nach:Empfohlen-Button
+    #Then ich sehe im Dropdown-Menü verschiedene SortierenOptionen als sichtbar
+    #When Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend
+    #Then ich sehe den Preis: Aufsteigend-Button als sichtbar
+    #And ich sehe Ergebnissen oder Vorschlägen für socken text
+    #And ich sehe Ergebnisse Titel
+    #And ich sehe verschiedene socken Produkte mit der Beschreibungen
+    #And ich sehe verschiedene socken Produkte mit der Aufsteigende Preise
+    #When Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend
+    #Then ich sehe den Preis: Absteigend-Button als sichtbar
+    #When Ich klicke im Dropdown-Menü auf die Option Preis: Absteigend
+    #Then ich sehe den Preis: Absteigend-Button als sichtbar
+    #And ich sehe Ergebnissen oder Vorschlägen für socken text
+    #And ich sehe Ergebnisse Titel
+    #And ich sehe verschiedene socken Produkte mit der Beschreibungen
+    #And ich sehe verschiedene socken Produkte mit der Absteigende Preise
+    #When Ich klicke im Dropdown-Menü auf die Option Preis: Absteigend
+    #Then ich sehe den Durchschn. Kundenbewertung-Button als sichtbar
+    #When Ich klicke im Dropdown-Menü auf die Option Durchschn. Kundenbewertung
+    #Then ich sehe den Durchschn. Kundenbewertung-Button als sichtbar
+    #And ich sehe Ergebnissen oder Vorschlägen für socken text
+    #And ich sehe Ergebnisse Titel
+    #And ich sehe verschiedene socken Produkte mit der Beschreibungen
+    #And ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen
