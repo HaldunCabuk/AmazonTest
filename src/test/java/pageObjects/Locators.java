@@ -31,6 +31,7 @@ public interface Locators {
     By lPrices = By.xpath("//span[@class=\"a-price-whole\"]");
     By lLieferungInfos = By.xpath("//div[@class='a-row s-align-children-center']");
     By lSearchButton = By.id("nav-search-submit-button");
+    By lSortingPrices = By.xpath("//span[@class='a-price']/span[@class='a-offscreen']");
 
 
 

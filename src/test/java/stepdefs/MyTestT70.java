@@ -75,4 +75,16 @@ public class MyTestT70 extends BaseSteps{
 
         click(bp.getElementWithConcat2("Preis: Aufsteigend"));
     }
+
+    @Then("ich sehe Dropdown-Menübutton mit dem Namen Preis: Aufsteigend-Button als sichtbar")
+    public void ichSeheDropdownMenübuttonMitDemNamenPreisAufsteigendButtonAlsSichtbar() {
+
+        waitForVisibility(bp.getElementWithConcat2("Preis: Aufsteigend"));
+    }
+
+    @And("ich sehe verschiedene socken Produkte mit der Aufsteigende Preise")
+    public void ichSeheVerschiedeneSockenProdukteMitDerAufsteigendePreise() {
+
+        bp.sortingPrices();
+    }
 }

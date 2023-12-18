@@ -17,11 +17,11 @@ Feature: Verbesserte Suchgenauigkeit
     When ich klicke auf Sortieren nach:Empfohlen-Button
     Then ich sehe im Dropdown-Menü verschiedene SortierenOptionen als sichtbar
     When Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend
-    #Then ich sehe den Preis: Aufsteigend-Button als sichtbar
-    #And ich sehe Ergebnissen oder Vorschlägen für socken text
-    #And ich sehe Ergebnisse Titel
-    #And ich sehe verschiedene socken Produkte mit der Beschreibungen
-    #And ich sehe verschiedene socken Produkte mit der Aufsteigende Preise
+    Then ich sehe Dropdown-Menübutton mit dem Namen Preis: Aufsteigend-Button als sichtbar
+    And ich sehe Ergebnissen oder Vorschlägen für socken text
+    And ich sehe Ergebnisse Titel
+    And ich sehe verschiedene socken Produkte mit der Beschreibungen
+    And ich sehe verschiedene socken Produkte mit der Aufsteigende Preise
     #When Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend
     #Then ich sehe den Preis: Absteigend-Button als sichtbar
     #When Ich klicke im Dropdown-Menü auf die Option Preis: Absteigend
