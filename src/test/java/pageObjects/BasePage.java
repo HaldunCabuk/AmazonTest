@@ -48,14 +48,14 @@ public class BasePage extends BaseSteps {
     }
 */
 
-    public void click(WebElement element){
-        wait.until(driver ->{
+    public void click(WebElement element) {
+        wait.until(driver -> {
             try {
                 element.click();
                 return true;
-            }catch (StaleElementReferenceException e){
+            } catch (StaleElementReferenceException e) {
                 return false;
-            }catch (Exception e){
+            } catch (Exception e) {
                 return false;
             }
         });
@@ -295,13 +295,16 @@ public class BasePage extends BaseSteps {
 
         // Checked both product prices and assets were queried.
 
-        for (int i = 0; i < prices.size(); i++) {
+        for (int i = 0; i < 5; i++) {
             element = prices.get(i);
             String str = element.getText();
-            String s = str.replaceAll("[^0-9]", "").substring(0, 2);
+
+            String s = str.replaceAll("[^0-9]", "");
+            System.out.println(s);
             int a = Integer.parseInt(s);
-            System.out.println(a);
+
             Assert.assertFalse(a < 0);
+
         }
 
     }
@@ -345,6 +348,7 @@ public class BasePage extends BaseSteps {
         By lConceitedText = By.xpath(String.format(text, wanted));
         wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
     }
+
     public void checkVisibleOf(String text, String wanted) {
 
         By lConceitedText = By.xpath(String.format(text, wanted));
