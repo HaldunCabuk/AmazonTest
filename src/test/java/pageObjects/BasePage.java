@@ -39,11 +39,12 @@ public class BasePage extends BaseSteps {
 
     }
 
-    public boolean isClickable(By locator) {
+    public boolean isSortingOptionsClickable(By locator) {
 
         boolean isTrue = false;
 
-        if (wait.until(ExpectedConditions.elementToBeClickable(locator)).isDisplayed()) {
+        if (driver.findElements(locator).size()>0) {
+            wait.until(ExpectedConditions.elementToBeClickable(locator));
             isTrue = true;
         }
         return isTrue;
@@ -301,7 +302,7 @@ public class BasePage extends BaseSteps {
 
     public void checkPrices() {
 
-        List<WebElement> prices = driver.findElements(lPrices2);
+        List<WebElement> prices = driver.findElements(lPrices);
 
         // Checked both product prices and assets were queried.
 
@@ -346,6 +347,22 @@ public class BasePage extends BaseSteps {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
     }
 
+    public WebElement getElementWithConcat2(String text) {
+
+        String xpath1 = "//div[@*='%s']";
+        String xpath2 = "//span[text()='%s']";
+        String xpath3 = "//li//*[text()='%s']";
+
+        xpath1 = String.format(xpath1,text);
+        xpath2 = String.format(xpath2,text);
+        xpath3 = String.format(xpath3,text);
+
+        String xpath = xpath1 + "|" + xpath2 + "|" + xpath3;
+
+        By lConceitedText = By.xpath(xpath);
+        sleep(800);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
+    }
     public WebElement clickByString(String text, String wanted) {
 
         By lConceitedText = By.xpath(String.format(text, wanted));
@@ -366,6 +383,20 @@ public class BasePage extends BaseSteps {
             element = elements.get(i);
             wait.until(ExpectedConditions.visibilityOf(element));
         }
+
+    }
+
+    public void checkDdSortingOpVisible(String text){
+        String str = "//option[text()='%s']";
+        By lConceitedText = By.xpath(String.format(str,text));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
+
+    }
+    public void checkDdSortingOpClickable(String text){
+       // String str = "//option[text()='%s']";
+        String str = "//span[text()='%s']";
+        By lConceitedText = By.xpath(String.format(str,text));
+        wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
 
     }
 
@@ -405,7 +436,7 @@ public class BasePage extends BaseSteps {
     public void clickDdOptionbyAction(String text, By locator) {
 
         List<WebElement> elements = driver.findElements(locator);
-        WebElement elm;
+        WebElement elm ;
         WebElement wantedElement = null;
         int num = 0;
 
@@ -416,9 +447,7 @@ public class BasePage extends BaseSteps {
                 wantedElement = elements.get(i);
                 break;
             }
-
         }
-
 
         for (int i = 0; i < num; i++) {
 
@@ -427,6 +456,17 @@ public class BasePage extends BaseSteps {
 
         sleep(750);
         wait.until(ExpectedConditions.visibilityOf(wantedElement)).click();
+    }
+    public void clickSortingOptionOf2(String text, By locator) {
+
+        List<WebElement> elements = driver.findElements(locator);
+
+
+        for (WebElement webElement : elements) {
+            if (webElement.getText().equals(text)){
+                webElement.click();
+            }
+        }
     }
 
 }

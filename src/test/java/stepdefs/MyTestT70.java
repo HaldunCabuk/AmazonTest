@@ -49,19 +49,19 @@ public class MyTestT70 extends BaseSteps{
     @And("ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als sichtbar")
     public void ichSeheDropdownMenübuttonMitDemNamenSortierenNachEmpfohlenAlsSichtbar() {
 
-        waitForVisibility(lSortingButton);
+        waitForVisibility(bp.getElementWithConcat2("Empfohlen"));
     }
 
     @And("ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als klickbar")
     public void ichSeheDropdownMenübuttonMitDemNamenSortierenNachEmpfohlenAlsKlickbar() {
 
-        bp.isClickable(lSortingButton);
+        bp.checkDdSortingOpClickable("Empfohlen");
     }
 
     @When("ich klicke auf Sortieren nach:Empfohlen-Button")
     public void ichKlickeAufSortierenNachEmpfohlenButton() {
+        click(bp.getElementWithConcat2("Empfohlen"));
 
-        bp.click(bp.getElement(lSortingButton));
     }
 
     @Then("ich sehe im Dropdown-Menü verschiedene SortierenOptionen als sichtbar")
@@ -73,6 +73,6 @@ public class MyTestT70 extends BaseSteps{
     @When("Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend")
     public void ichKlickeImDropdownMenüAufDieOptionPreisAufsteigend() {
 
-        bp.clickDdOptionbyAction("Preis: Aufsteigend",lSortingOptions);
+        click(bp.getElementWithConcat2("Preis: Aufsteigend"));
     }
 }
