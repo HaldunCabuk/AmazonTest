@@ -325,11 +325,11 @@ public class BasePage extends BaseSteps {
 
         // Checked both product prices and assets were queried.
 
-        WebElement elem;
+
 
         for (int i = 0; i < 20; i++) {
-            elem = prices.get(i);
-            System.out.println(elem.getText());
+            element = prices.get(i);
+            System.out.println(element.getText());
 
             //String s = str.replaceAll("[^0-9]", "");
             //int a = Integer.parseInt(s);
