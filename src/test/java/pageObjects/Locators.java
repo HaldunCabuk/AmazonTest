@@ -25,12 +25,14 @@ public interface Locators {
     String lAllTexts ="//*/span[contains(text(),'%s')]";
     String lDdButtonsName = "//div[@class='nav-search-facade']/span[text()='%s']";
     By lSelectOptions = By.xpath("//select[@class='nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown']/option");
+    By lSortingOptions = By.cssSelector(".a-nostyle.a-list-link");
     By lProducts = By.xpath("//div[@class='a-row a-spacing-mini a-size-base a-color-base']"); //CheckHowManyProductsBeforeTestAsManuall
     By lRezensionens = By.cssSelector(".a-icon.a-icon-star-small.a-star-small-4-5.aok-align-bottom");
     By lPrices = By.xpath("//div[@class='a-row']//span[@class='a-price']");
     By lPrices2 = By.xpath("//span[@class=\"a-price-whole\"]");
     By lLieferungInfos = By.xpath("//div[@class='a-row s-align-children-center']");
     By lSearchButton = By.id("nav-search-submit-button");
+    By lSortingButton = By.cssSelector(".a-button-text.a-declarative");
 
 
 

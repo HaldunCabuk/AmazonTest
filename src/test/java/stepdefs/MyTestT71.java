@@ -61,14 +61,14 @@ public class MyTestT71 extends BaseSteps{
     @Then("ich sehe im Dropdown-Menü verschiedene Produktkategorien als klickbar")
     public void ichSeheImDropdownMenüVerschiedeneProduktkategorienAlsKlickbar() {
 
-        bp.checkDdOptionsVisibility();
-        bp.checkDdOptionsClickable();
+        bp.checkDdOptionsVisibility(lSelectOptions);
+        bp.checkDdOptionsClickable(lSelectOptions);
     }
 
     @And("Ich klicke im Dropdown-Menü auf die Option Zeitschriften")
     public void ichKlickeImDropdownMenüAufDieOptionZeitschriften() {
 
-        bp.clickDdOptionbyAction("Zeitschriften");
+        bp.clickDdOptionbyAction("Zeitschriften",lSelectOptions);
     }
 
     @Then("ich sehe den Zeitschriften-Button als klickbar")
@@ -104,7 +104,7 @@ public class MyTestT71 extends BaseSteps{
     @And("ich klicke im Dropdown-Menü auf die Option Bücher")
     public void ichKlickeImDropdownMenüAufDieOptionBücher() {
 
-        bp.clickDdOptionbyAction("Bücher");
+        bp.clickDdOptionbyAction("Bücher",lSelectOptions);
     }
 
     @Then("ich sehe den Bücher-Button als klickbar")

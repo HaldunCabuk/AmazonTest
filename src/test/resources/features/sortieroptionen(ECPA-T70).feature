@@ -12,11 +12,11 @@ Feature: Verbesserte Suchgenauigkeit
     And ich sehe verschiedene socken Produkte mit der Bewertungen
     And ich sehe verschiedene socken Produkte mit der Preise
     And ich sehe verschiedene socken Produkte mit der Lieferung infos
-    #And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als sichtbar
-    #And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als klickbar
-    #When ich klicke auf Sortieren nach:Empfohlen-Button
-    #Then ich sehe im Dropdown-Menü verschiedene SortierenOptionen als sichtbar
-    #When Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend
+    And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als sichtbar
+    And ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als klickbar
+    When ich klicke auf Sortieren nach:Empfohlen-Button
+    Then ich sehe im Dropdown-Menü verschiedene SortierenOptionen als sichtbar
+    When Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend
     #Then ich sehe den Preis: Aufsteigend-Button als sichtbar
     #And ich sehe Ergebnissen oder Vorschlägen für socken text
     #And ich sehe Ergebnisse Titel

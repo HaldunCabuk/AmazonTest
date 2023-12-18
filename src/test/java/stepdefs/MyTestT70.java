@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.BasePage;
 
-import static pageObjects.Locators.lAllTexts;
+import static pageObjects.Locators.*;
 
 public class MyTestT70 extends BaseSteps{
     BasePage bp = new BasePage();
@@ -44,5 +44,35 @@ public class MyTestT70 extends BaseSteps{
     public void ichSeheVerschiedeneSockenProdukteMitDerLieferungInfos() {
 
         bp.checkLieferungInfos();
+    }
+
+    @And("ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als sichtbar")
+    public void ichSeheDropdownMenübuttonMitDemNamenSortierenNachEmpfohlenAlsSichtbar() {
+
+        waitForVisibility(lSortingButton);
+    }
+
+    @And("ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als klickbar")
+    public void ichSeheDropdownMenübuttonMitDemNamenSortierenNachEmpfohlenAlsKlickbar() {
+
+        bp.isClickable(lSortingButton);
+    }
+
+    @When("ich klicke auf Sortieren nach:Empfohlen-Button")
+    public void ichKlickeAufSortierenNachEmpfohlenButton() {
+
+        bp.click(bp.getElement(lSortingButton));
+    }
+
+    @Then("ich sehe im Dropdown-Menü verschiedene SortierenOptionen als sichtbar")
+    public void ichSeheImDropdownMenüVerschiedeneSortierenOptionenAlsSichtbar() {
+
+        bp.checkDdOptionsVisibility(lSortingOptions);
+    }
+
+    @When("Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend")
+    public void ichKlickeImDropdownMenüAufDieOptionPreisAufsteigend() {
+
+        bp.clickDdOptionbyAction("Preis: Aufsteigend",lSortingOptions);
     }
 }

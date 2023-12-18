@@ -39,6 +39,16 @@ public class BasePage extends BaseSteps {
 
     }
 
+    public boolean isClickable(By locator) {
+
+        boolean isTrue = false;
+
+        if (wait.until(ExpectedConditions.elementToBeClickable(locator)).isDisplayed()) {
+            isTrue = true;
+        }
+        return isTrue;
+    }
+
 
     // Said Hocanin Stale element hatasi cozumu//
 
@@ -300,10 +310,9 @@ public class BasePage extends BaseSteps {
             String str = element.getText();
 
             String s = str.replaceAll("[^0-9]", "");
-            System.out.println(s);
             int a = Integer.parseInt(s);
 
-            Assert.assertFalse(a < 0);
+            Assert.assertTrue(a >= 0);
 
         }
 
@@ -349,14 +358,9 @@ public class BasePage extends BaseSteps {
         wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
     }
 
-    public void checkVisibleOf(String text, String wanted) {
 
-        By lConceitedText = By.xpath(String.format(text, wanted));
-        wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
-    }
-
-    public void checkDdOptionsVisibility() {
-        List<WebElement> elements = driver.findElements(lSelectOptions);
+    public void checkDdOptionsVisibility(By locator) {
+        List<WebElement> elements = driver.findElements(locator);
 
         for (int i = 0; i < elements.size(); i++) {
             element = elements.get(i);
@@ -365,9 +369,9 @@ public class BasePage extends BaseSteps {
 
     }
 
-    public void checkDdOptionsClickable() {
+    public void checkDdOptionsClickable(By locator) {
 
-        List<WebElement> elements = driver.findElements(lSelectOptions);
+        List<WebElement> elements = driver.findElements(locator);
 
         for (int i = 0; i < elements.size(); i++) {
             element = elements.get(i);
@@ -398,9 +402,9 @@ public class BasePage extends BaseSteps {
     }*/
 
 
-    public void clickDdOptionbyAction(String text) {
+    public void clickDdOptionbyAction(String text, By locator) {
 
-        List<WebElement> elements = driver.findElements(lSelectOptions);
+        List<WebElement> elements = driver.findElements(locator);
         WebElement elm;
         WebElement wantedElement = null;
         int num = 0;
