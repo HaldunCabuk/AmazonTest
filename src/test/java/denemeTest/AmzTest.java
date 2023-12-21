@@ -39,6 +39,7 @@ public class AmzTest extends BasePage {
     By lPs5 = By.xpath("//div[@*='playstation 5']");
     By lPs5s = By.xpath("//div[@class='a-section']/div");
     By lPs5Fotos = By.xpath("//div[@class='a-section aok-relative s-image-fixed-height']");
+    By lSortedPrices = By.xpath("//span[@class='a-price']/span[@class='a-offscreen']");
 
 
     public AmzTest() {
@@ -102,6 +103,25 @@ public class AmzTest extends BasePage {
         wait.until(ExpectedConditions.attributeContains(locator,"class","nav-focus"));
 
 
+
+    }
+
+    @Test
+    public void testT70(){
+
+        BasePage bp = new BasePage();
+
+        driver.navigate().to(PropertyReader.read("Config").get("url"));
+        bp.acceptCookies(bp.getElement(lAcceptCookies));
+        sendKey(getInputByLocator("Suche Amazon.de"), "socken");
+        click(lSearchButton);
+        click(bp.getElementWithConcat2("Empfohlen"));
+        click(bp.getElementWithConcat2("Preis: Aufsteigend"));
+
+
+        List<WebElement> prices = driver.findElements(lSortedPrices);
+
+        System.out.println(prices.size());
 
 
     }
