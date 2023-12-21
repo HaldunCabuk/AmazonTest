@@ -16,6 +16,8 @@ import utils.PropertyReader;
 import static pageObjects.Locators.*;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AmzTest extends BasePage {
@@ -39,7 +41,7 @@ public class AmzTest extends BasePage {
     By lPs5 = By.xpath("//div[@*='playstation 5']");
     By lPs5s = By.xpath("//div[@class='a-section']/div");
     By lPs5Fotos = By.xpath("//div[@class='a-section aok-relative s-image-fixed-height']");
-    By lSortedPrices = By.xpath("//span[@class='a-price']/span[@class='a-offscreen']");
+    By lSortedPrices = By.xpath("//span[@data-a-size=\"xl\" and .//span]");
 
 
     public AmzTest() {
@@ -96,18 +98,17 @@ public class AmzTest extends BasePage {
     }
 
     @Test
-    public void test3(){ // Onemli -> DropDown Menu acildi mi diye baktigimiz adimlar
+    public void test3() { // Onemli -> DropDown Menu acildi mi diye baktigimiz adimlar
         By locator = By.cssSelector("#nav-search-dropdown-card > div");
         driver.navigate().to(PropertyReader.read("Config").get("url"));
         click(locator);
-        wait.until(ExpectedConditions.attributeContains(locator,"class","nav-focus"));
-
+        wait.until(ExpectedConditions.attributeContains(locator, "class", "nav-focus"));
 
 
     }
 
     @Test
-    public void testT70(){
+    public void testT70() {
 
         BasePage bp = new BasePage();
 
@@ -118,10 +119,22 @@ public class AmzTest extends BasePage {
         click(bp.getElementWithConcat2("Empfohlen"));
         click(bp.getElementWithConcat2("Preis: Aufsteigend"));
 
+        sleep(800);
 
         List<WebElement> prices = driver.findElements(lSortedPrices);
+        List<String> elm = new ArrayList<>();
 
-        System.out.println(prices.size());
+        for (int i = 0; i < prices.size(); i++) {
+
+            WebElement element = prices.get(i);
+            elm.add(element.getText());
+            String value = elm.get(i);
+            String newValue = value.replaceAll("\\s", "").replaceAll("[^0-9.]","");
+
+            System.out.println(newValue);
+            //System.out.println(element.getText());
+        }
+
 
 
     }
