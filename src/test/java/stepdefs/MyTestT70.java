@@ -85,6 +85,6 @@ public class MyTestT70 extends BaseSteps{
     @And("ich sehe verschiedene socken Produkte mit der Aufsteigende Preise")
     public void ichSeheVerschiedeneSockenProdukteMitDerAufsteigendePreise() {
 
-        bp.sortingPrices();
+        bp.aufsteigendePrices();
     }
 }
