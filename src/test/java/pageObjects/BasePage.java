@@ -9,6 +9,7 @@ import stepdefs.BaseSteps;
 
 import static pageObjects.Locators.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -43,7 +44,7 @@ public class BasePage extends BaseSteps {
 
         boolean isTrue = false;
 
-        if (driver.findElements(locator).size()>0) {
+        if (driver.findElements(locator).size() > 0) {
             wait.until(ExpectedConditions.elementToBeClickable(locator));
             isTrue = true;
         }
@@ -319,24 +320,125 @@ public class BasePage extends BaseSteps {
 
     }
 
-    public void sortingPrices() {
+    public void aufsteigendePrices() {
+
+        sleep(800);
 
         List<WebElement> prices = driver.findElements(lSortingPrices);
+        List<String> elm = new ArrayList<>();
+        List<Double> doubleNums = new ArrayList<>();
+        int counter = 0;
 
-        // Checked both product prices and assets were queried.
+        for (int i = 0; i < prices.size(); i++) {
 
-
-
-        for (int i = 0; i < 20; i++) {
-            element = prices.get(i);
-            System.out.println(element.getText());
-
-            //String s = str.replaceAll("[^0-9]", "");
-            //int a = Integer.parseInt(s);
+            WebElement element = prices.get(i);
+            elm.add(element.getText());
+            String value = elm.get(i);
+            String newValue = value.replaceAll("\\s", "").replaceAll("[^0-9]", "");
+            double ondalikliSayi = Double.parseDouble("0." + newValue.substring(1));
+            doubleNums.add(ondalikliSayi);
 
         }
 
+
+        for (int i = 0; i < 20; i++) {
+
+            try {
+                if (doubleNums.get(i) <= doubleNums.get(i + 1))
+                    counter++;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        Assert.assertEquals(counter, 20);
+
+
     }
+
+    public void absteigendePrices() {
+
+        sleep(800);
+
+        List<WebElement> prices = driver.findElements(lSortingPrices);
+        List<String> elm = new ArrayList<>();
+        List<Double> doubleNums = new ArrayList<>();
+        int counter = 0;
+
+        for (int i = 0; i < prices.size(); i++) {
+
+            WebElement element = prices.get(i);
+            elm.add(element.getText());
+            String value = elm.get(i);
+            String newValue = value.replaceAll("\\s", "").replaceAll("[^0-9]", "");
+
+
+            double ondalikliSayi = Double.parseDouble(newValue) / 1000;
+
+            doubleNums.add(ondalikliSayi);
+
+        }
+
+
+        for (int i = 0; i < 15; i++) {
+
+            try {
+                if (doubleNums.get(i) >= doubleNums.get(i + 1))
+                    counter++;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        Assert.assertEquals(counter, 15);
+
+
+    }
+
+    public void absteigendeBewertungen() {
+
+        sleep(800);
+
+        List<WebElement> bewertungen = driver.findElements(lSortingBewertungen);
+        WebElement element;
+
+        List<String> elm = new ArrayList<>();
+        List<Double> doubleNums = new ArrayList<>();
+        int counter = 0;
+
+        for (int i = 0; i < bewertungen.size(); i++) {
+
+            element = bewertungen.get(i);
+            elm.add(element.getText());
+            String value = elm.get(i);
+            String newValue = value.replaceAll("[^0-9]", "").substring(0,4);
+            System.out.println(newValue);
+
+
+
+            //double ondalikliSayi = Double.parseDouble(newValue)/1000;
+
+            //doubleNums.add(ondalikliSayi);
+
+        }
+
+
+        /*for (int i = 0; i < 15; i++) {
+
+            try {
+                if (doubleNums.get(i) >= doubleNums.get(i + 1))
+                    counter++;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        Assert.assertEquals(counter,15);*/
+
+
+        }
+
+
 
     public void checkLieferungInfos() {
         wait.until(driver -> {
@@ -366,22 +468,25 @@ public class BasePage extends BaseSteps {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
     }
 
-    public WebElement getElementWithConcat2(String text) {
+    public WebElement getElementWithConcat2(String text, int index) {
 
-        String xpath1 = "//div[@*='%s']";
-        String xpath2 = "//span[text()='%s']";
-        String xpath3 = "//li//*[text()='%s']";
+        String xpath1 = "(//div[@*='%s'])[" + index + "]";
+        String xpath2 = "(//span[text()='%s'])[" + index + "]";
+        String xpath3 = "(//li//*[text()='%s'])[" + index + "]";
 
-        xpath1 = String.format(xpath1,text);
-        xpath2 = String.format(xpath2,text);
-        xpath3 = String.format(xpath3,text);
+
+        xpath1 = String.format(xpath1, text);
+        xpath2 = String.format(xpath2, text);
+        xpath3 = String.format(xpath3, text);
+
 
         String xpath = xpath1 + "|" + xpath2 + "|" + xpath3;
 
         By lConceitedText = By.xpath(xpath);
-        sleep(800);
+        sleep(700);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
     }
+
     public WebElement clickByString(String text, String wanted) {
 
         By lConceitedText = By.xpath(String.format(text, wanted));
@@ -405,16 +510,17 @@ public class BasePage extends BaseSteps {
 
     }
 
-    public void checkDdSortingOpVisible(String text){
+    public void checkDdSortingOpVisible(String text) {
         String str = "//option[text()='%s']";
-        By lConceitedText = By.xpath(String.format(str,text));
+        By lConceitedText = By.xpath(String.format(str, text));
         wait.until(ExpectedConditions.visibilityOfElementLocated(lConceitedText));
 
     }
-    public void checkDdSortingOpClickable(String text){
-       // String str = "//option[text()='%s']";
+
+    public void checkDdSortingOpClickable(String text) {
+        // String str = "//option[text()='%s']";
         String str = "//span[text()='%s']";
-        By lConceitedText = By.xpath(String.format(str,text));
+        By lConceitedText = By.xpath(String.format(str, text));
         wait.until(ExpectedConditions.elementToBeClickable(lConceitedText));
 
     }
@@ -455,7 +561,7 @@ public class BasePage extends BaseSteps {
     public void clickDdOptionbyAction(String text, By locator) {
 
         List<WebElement> elements = driver.findElements(locator);
-        WebElement elm ;
+        WebElement elm;
         WebElement wantedElement = null;
         int num = 0;
 
@@ -476,13 +582,14 @@ public class BasePage extends BaseSteps {
         sleep(750);
         wait.until(ExpectedConditions.visibilityOf(wantedElement)).click();
     }
+
     public void clickSortingOptionOf2(String text, By locator) {
 
         List<WebElement> elements = driver.findElements(locator);
 
 
         for (WebElement webElement : elements) {
-            if (webElement.getText().equals(text)){
+            if (webElement.getText().equals(text)) {
                 webElement.click();
             }
         }

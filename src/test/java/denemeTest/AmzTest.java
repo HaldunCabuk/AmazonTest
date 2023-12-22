@@ -42,6 +42,7 @@ public class AmzTest extends BasePage {
     By lPs5s = By.xpath("//div[@class='a-section']/div");
     By lPs5Fotos = By.xpath("//div[@class='a-section aok-relative s-image-fixed-height']");
     By lSortedPrices = By.xpath("//span[@data-a-size=\"xl\" and .//span]");
+    By lSortedBewertungen = By.xpath("//i[@class='a-icon a-icon-star-small a-star-small-5 aok-align-bottom']/span");
 
 
     public AmzTest() {
@@ -116,25 +117,40 @@ public class AmzTest extends BasePage {
         bp.acceptCookies(bp.getElement(lAcceptCookies));
         sendKey(getInputByLocator("Suche Amazon.de"), "socken");
         click(lSearchButton);
-        click(bp.getElementWithConcat2("Empfohlen"));
-        click(bp.getElementWithConcat2("Preis: Aufsteigend"));
+        click(bp.getElementWithConcat2("Empfohlen",1));
+        click(bp.getElementWithConcat2("Durchschn. Kundenbewertung",1));
 
         sleep(800);
 
-        List<WebElement> prices = driver.findElements(lSortedPrices);
+
+        List<WebElement> bewertungen = driver.findElements(lSortedBewertungen);
         List<String> elm = new ArrayList<>();
+        List<Double> doubleNums = new ArrayList<>();
+        int counter = 0;
 
-        for (int i = 0; i < prices.size(); i++) {
 
-            WebElement element = prices.get(i);
+        for (int i = 0; i < bewertungen.size(); i++) {
+
+            WebElement element = bewertungen.get(i);
             elm.add(element.getText());
             String value = elm.get(i);
-            String newValue = value.replaceAll("\\s", "").replaceAll("[^0-9.]","");
-
-            System.out.println(newValue);
-            //System.out.println(element.getText());
+            System.out.println(value);
         }
 
+
+
+
+        /*for (int i = 0; i < 20; i++) {
+
+            try {
+                if (doubleNums.get(i) <= doubleNums.get(i + 1))
+                   counter++;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        Assert.assertEquals(counter,20);*/
 
 
     }

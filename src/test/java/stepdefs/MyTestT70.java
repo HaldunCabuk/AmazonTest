@@ -49,7 +49,7 @@ public class MyTestT70 extends BaseSteps{
     @And("ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als sichtbar")
     public void ichSeheDropdownMenübuttonMitDemNamenSortierenNachEmpfohlenAlsSichtbar() {
 
-        waitForVisibility(bp.getElementWithConcat2("Empfohlen"));
+        waitForVisibility(bp.getElementWithConcat2("Empfohlen",1));
     }
 
     @And("ich sehe Dropdown-Menübutton mit dem Namen Sortieren nach:Empfohlen als klickbar")
@@ -60,7 +60,7 @@ public class MyTestT70 extends BaseSteps{
 
     @When("ich klicke auf Sortieren nach:Empfohlen-Button")
     public void ichKlickeAufSortierenNachEmpfohlenButton() {
-        click(bp.getElementWithConcat2("Empfohlen"));
+        click(bp.getElementWithConcat2("Empfohlen",1));
 
     }
 
@@ -73,18 +73,61 @@ public class MyTestT70 extends BaseSteps{
     @When("Ich klicke im Dropdown-Menü auf die Option Preis: Aufsteigend")
     public void ichKlickeImDropdownMenüAufDieOptionPreisAufsteigend() {
 
-        click(bp.getElementWithConcat2("Preis: Aufsteigend"));
+        click(bp.getElementWithConcat2("Preis: Aufsteigend",1));
     }
 
     @Then("ich sehe Dropdown-Menübutton mit dem Namen Preis: Aufsteigend-Button als sichtbar")
     public void ichSeheDropdownMenübuttonMitDemNamenPreisAufsteigendButtonAlsSichtbar() {
 
-        waitForVisibility(bp.getElementWithConcat2("Preis: Aufsteigend"));
+        waitForVisibility(bp.getElementWithConcat2("Preis: Aufsteigend",1));
     }
 
     @And("ich sehe verschiedene socken Produkte mit der Aufsteigende Preise")
     public void ichSeheVerschiedeneSockenProdukteMitDerAufsteigendePreise() {
 
         bp.aufsteigendePrices();
+    }
+
+    @Then("ich sehe den Preis: Absteigend-Button als sichtbar")
+    public void ichSeheDenPreisAbsteigendButtonAlsSichtbar() {
+
+        waitForVisibility(bp.getElementWithConcat2("Preis: Aufsteigend",2));
+    }
+
+    @When("Ich klicke im Dropdown-Menü auf die Option Preis: Absteigend")
+    public void ichKlickeImDropdownMenüAufDieOptionPreisAbsteigend() {
+
+        click(bp.getElementWithConcat2("Preis: Absteigend",2));
+    }
+
+    @And("ich sehe verschiedene socken Produkte mit der Absteigende Preise")
+    public void ichSeheVerschiedeneSockenProdukteMitDerAbsteigendePreise() {
+
+        bp.absteigendePrices();
+    }
+
+
+    @When("Ich klicke auf die Option Preis: Absteigend")
+    public void ichKlickeAufDieOptionPreisAbsteigend() {
+
+        click(bp.getElementWithConcat2("Preis: Absteigend",1));
+    }
+
+    @Then("ich sehe den Durchschn. Kundenbewertung-Button als sichtbar")
+    public void ichSeheDenDurchschnKundenbewertungButtonAlsSichtbar() {
+
+        waitForVisibility(bp.getElementWithConcat2("Durchschn. Kundenbewertung",3));
+    }
+
+    @When("Ich klicke im Dropdown-Menü auf die Option Durchschn. Kundenbewertung")
+    public void ichKlickeImDropdownMenüAufDieOptionDurchschnKundenbewertung() {
+
+        click(bp.getElementWithConcat2("Durchschn. Kundenbewertung",3));
+    }
+
+    @And("ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen")
+    public void ichSeheVerschiedeneSockenProdukteMitDerAbsteigendeKundenbewertungen() {
+
+        bp.absteigendeBewertungen();
     }
 }
