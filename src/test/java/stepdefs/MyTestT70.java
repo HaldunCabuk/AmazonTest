@@ -88,16 +88,19 @@ public class MyTestT70 extends BaseSteps{
         bp.aufsteigendePrices();
     }
 
-    @Then("ich sehe den Preis: Absteigend-Button als sichtbar")
-    public void ichSeheDenPreisAbsteigendButtonAlsSichtbar() {
+    @Then("ich sehe im Dropdown-Menü den Preis: Absteigend-Button als sichtbar")
+    public void ichSeheImDropdownMenüDenPreisAbsteigendButtonAlsSichtbar() {
 
         waitForVisibility(bp.getElementWithConcat2("Preis: Aufsteigend",2));
     }
 
-    @When("Ich klicke im Dropdown-Menü auf die Option Preis: Absteigend")
-    public void ichKlickeImDropdownMenüAufDieOptionPreisAbsteigend() {
 
-        click(bp.getElementWithConcat2("Preis: Absteigend",2));
+
+
+    @When("Ich klicke Dropdown-Menübutton mit dem Namen Preis: Aufsteigend")
+    public void ichKlickeDropdownMenübuttonMitDemNamenPreisAufsteigend() {
+
+        click(bp.getElementWithConcat2("Preis: Aufsteigend",1));
     }
 
     @And("ich sehe verschiedene socken Produkte mit der Absteigende Preise")
@@ -112,6 +115,12 @@ public class MyTestT70 extends BaseSteps{
 
         click(bp.getElementWithConcat2("Preis: Absteigend",1));
     }
+    @When("Ich klicke im Dropdown-Menü auf die Option Preis: Absteigend")
+    public void ichKlickeImDropdownMenüAufDieOptionPreisAbsteigend() {
+
+        click(bp.getElementWithConcat2("Preis: Absteigend",2));
+    }
+
 
     @Then("ich sehe den Durchschn. Kundenbewertung-Button als sichtbar")
     public void ichSeheDenDurchschnKundenbewertungButtonAlsSichtbar() {
@@ -130,4 +139,7 @@ public class MyTestT70 extends BaseSteps{
 
         bp.absteigendeBewertungen();
     }
+
+
+
 }
