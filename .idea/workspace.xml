@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/Locators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTest3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT70.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT70.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/Hooks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +67,7 @@
       <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AmzTest.testT70">
+  <component name="RunManager" selected="TestNG.RunnerT70">
     <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" />
@@ -164,8 +160,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AmzTest.testT70" />
         <item itemvalue="TestNG.RunnerT70" />
+        <item itemvalue="TestNG.AmzTest.testT70" />
         <item itemvalue="TestNG.AmzTest.testT" />
         <item itemvalue="TestNG.RunnerT71" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" />
@@ -440,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703191931068</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="AmazonTest">
+      <created>1703252016980</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1703252016980</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

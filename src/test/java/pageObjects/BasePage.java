@@ -400,30 +400,28 @@ public class BasePage extends BaseSteps {
         sleep(800);
 
         List<WebElement> bewertungen = driver.findElements(lSortingBewertungen);
-        WebElement element;
 
         List<String> elm = new ArrayList<>();
         List<Double> doubleNums = new ArrayList<>();
         int counter = 0;
 
+
         for (int i = 0; i < bewertungen.size(); i++) {
 
-            element = bewertungen.get(i);
-            elm.add(element.getText());
+
+            WebElement element = bewertungen.get(i);
+            elm.add(element.getAttribute("innerHTML"));
             String value = elm.get(i);
-            String newValue = value.replaceAll("[^0-9]", "").substring(0,4);
-            System.out.println(newValue);
-
-
-
-            //double ondalikliSayi = Double.parseDouble(newValue)/1000;
-
-            //doubleNums.add(ondalikliSayi);
+            String newValue = value.replaceAll(",",".").substring(0,4);
+            double ondalikliSayi = Double.parseDouble(newValue);
+            doubleNums.add(ondalikliSayi);
 
         }
 
 
-        /*for (int i = 0; i < 15; i++) {
+
+
+        for (int i = 14; i < 34; i++) {
 
             try {
                 if (doubleNums.get(i) >= doubleNums.get(i + 1))
@@ -433,7 +431,7 @@ public class BasePage extends BaseSteps {
             }
 
         }
-        Assert.assertEquals(counter,15);*/
+        Assert.assertEquals(counter,20);
 
 
         }

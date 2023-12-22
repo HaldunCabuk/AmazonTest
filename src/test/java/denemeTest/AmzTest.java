@@ -42,7 +42,7 @@ public class AmzTest extends BasePage {
     By lPs5s = By.xpath("//div[@class='a-section']/div");
     By lPs5Fotos = By.xpath("//div[@class='a-section aok-relative s-image-fixed-height']");
     By lSortedPrices = By.xpath("//span[@data-a-size=\"xl\" and .//span]");
-    By lSortedBewertungen = By.xpath("//i[@class='a-icon a-icon-star-small a-star-small-5 aok-align-bottom']/span");
+    By lSortedBewertungen = By.cssSelector(".a-icon.a-icon-star-small.a-star-small-5.aok-align-bottom > span");
 
 
     public AmzTest() {
@@ -122,8 +122,8 @@ public class AmzTest extends BasePage {
 
         sleep(800);
 
-
         List<WebElement> bewertungen = driver.findElements(lSortedBewertungen);
+
         List<String> elm = new ArrayList<>();
         List<Double> doubleNums = new ArrayList<>();
         int counter = 0;
@@ -131,26 +131,30 @@ public class AmzTest extends BasePage {
 
         for (int i = 0; i < bewertungen.size(); i++) {
 
+
             WebElement element = bewertungen.get(i);
-            elm.add(element.getText());
+            elm.add(element.getAttribute("innerHTML"));
             String value = elm.get(i);
-            System.out.println(value);
+            String newValue = value.replaceAll(",",".").substring(0,4);
+            double ondalikliSayi = Double.parseDouble(newValue);
+            doubleNums.add(ondalikliSayi);
+
         }
 
 
 
 
-        /*for (int i = 0; i < 20; i++) {
+        for (int i = 14; i < 34; i++) {
 
             try {
-                if (doubleNums.get(i) <= doubleNums.get(i + 1))
+                if (doubleNums.get(i) >= doubleNums.get(i + 1))
                    counter++;
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
         }
-        Assert.assertEquals(counter,20);*/
+        Assert.assertEquals(counter,20);
 
 
     }
