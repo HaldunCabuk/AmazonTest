@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT70.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefs/MyTestT70.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,9 +158,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.RunnerT70" />
+        <item itemvalue="TestNG.RunnerT71" />
         <item itemvalue="TestNG.AmzTest.testT70" />
         <item itemvalue="TestNG.AmzTest.testT" />
-        <item itemvalue="TestNG.RunnerT71" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" />
       </list>
     </recent_temporary>
@@ -449,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703257907892</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="AmazonTest">
+      <created>1703258963711</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1703258963711</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
