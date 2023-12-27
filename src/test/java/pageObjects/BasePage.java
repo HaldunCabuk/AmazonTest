@@ -156,6 +156,7 @@ public class BasePage extends BaseSteps {
             for (WebElement foto : fotos) {
                 count++;
             }
+            System.out.println("count = " + count);
             Assert.assertNotEquals(count, 0);
         } catch (Exception e) {
             try {
@@ -180,9 +181,11 @@ public class BasePage extends BaseSteps {
 
         int count = 0;
         List<WebElement> fotos = driver.findElements(lPhotos);
+
         for (WebElement foto : fotos) {
             count++;
         }
+        System.out.println("count = " + count);
         Assert.assertNotEquals(count, 0);
 
     }

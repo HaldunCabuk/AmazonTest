@@ -2,14 +2,14 @@ Feature: Verbesserte Suchgenauigkeit
 
   Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)
 
-    Given ich gehe auf die Amazon.de startseite.
+    Given ich gehe auf die Amazon.de Startseite.
     Then ich sehe title "Amazon.de"
     When ich schreibe im Suchfeld der "Suche Amazon.de" enthält, den text "wireless".
     Then ich sehe im Dropdown-Menu "wireless" beginnende Producktüberschrifften
     And ich sehe im Dropdown-Menu "wireless" beginnende Producktüberschrifften als klickbar
     When ich klicke auf die suchtaste.
     Then ich sehe unter dem Ergebnisse haupttitel "wireless" oder "kabellos" Produkte.
-    #Then ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen
+    Then ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen
     Then ich sollte unter dem navbar "Ergebnissen oder Vorschlägen für" sehen.
     And ich sollte unter dem navbar "wireless" text sehen dazu.
     And ich sehe "Ergebnisse" haupttitel.

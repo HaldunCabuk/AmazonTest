@@ -71,7 +71,7 @@ public class MyTest1 extends BaseSteps {
     @And("ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen")
     public void ichSeheUnterDerErgebnisseTitelDieKleineFotosBeschreibungenUndKundenrezensionen() {
 
-        bp.checkTheFotos();
+        bp.checkPhotos();
         bp.checkTheInfos();
         bp.checkTheRezension();
     }
