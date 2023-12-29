@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public interface Locators {
     By lAcceptCookies = By.id("sp-cc-accept");
-    By lDdMenuProds = By.cssSelector(".s-suggestion-container div");
+    By lDdMenuProds = By.xpath("//div[@class='s-suggestion-container']/div");
     By lSearch = By.cssSelector("#nav-search-submit-button");
     By lInfos = By.xpath("//h2[contains(@class,'a-color-base')]");
     By lRezensionen = By.xpath("//a[@class='a-popover-trigger a-declarative']");

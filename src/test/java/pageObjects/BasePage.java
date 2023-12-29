@@ -101,10 +101,11 @@ public class BasePage extends BaseSteps {
     }
 
     public void checkDropProductsVisible(String text, By locator) {
-        // bu metodda acilan dropmenudeki optionlarin verilen text degerle baslayip baslamadigi sayisal olarak assert edildi
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        long num = driver.findElements(locator).stream().filter(e -> !e.getText().toLowerCase().contains(text)).count();
-        Assert.assertEquals(num, 0);
+
+
+        List<WebElement> elements = driver.findElements(locator);
+        long num = driver.findElements(locator).stream().filter(e -> e.getText().toLowerCase().contains(text)).count();
+        Assert.assertEquals(num,elements.size());
 
     }
 
@@ -114,7 +115,6 @@ public class BasePage extends BaseSteps {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         long num = driver.findElements(locator).stream().filter(e -> e.getText().toLowerCase().startsWith(text)).count();
         Assert.assertEquals(num, nums);
-
 
     }
 
