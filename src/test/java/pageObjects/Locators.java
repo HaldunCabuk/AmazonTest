@@ -34,10 +34,4 @@ public interface Locators {
     By lSortingPrices = By.xpath("//span[@data-a-size=\"xl\" and .//span]");
     By lSortingBewertungen = By.xpath("//i[@class='a-icon a-icon-star-small a-star-small-5 aok-align-bottom']/span");
 
-
-
-
-
-
-
 }
