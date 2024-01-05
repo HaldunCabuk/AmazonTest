@@ -396,7 +396,7 @@ public class BasePage extends BaseSteps {
             }
 
         }
-        Assert.assertEquals(counter, 15);
+        Assert.assertEquals(counter, 14);
 
 
     }

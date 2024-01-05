@@ -4,6 +4,6 @@ public enum Browsers {
     CHROME,
     EDGE,
     SAFARI,
-    FIREFOX
-    ;
+    FIREFOX;
+
 }

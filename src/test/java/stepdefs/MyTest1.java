@@ -1,9 +1,11 @@
 package stepdefs;
 
+import driver.Browsers;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 import pageObjects.BasePage;
 import utils.PropertyReader;
 import static pageObjects.Locators.*;
