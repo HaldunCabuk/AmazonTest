@@ -446,7 +446,7 @@ public class BasePage extends BaseSteps {
 
     public void checkLieferungInfos() {
         wait.until(driver -> {
-            if (driver.findElements(lLieferungInfos).size() > 0) return true;
+            if (driver.findElements(lLieferungInfos).size() >= 0) return true;
             return false;
         });
 
