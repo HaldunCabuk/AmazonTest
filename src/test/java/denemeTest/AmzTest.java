@@ -143,7 +143,6 @@ public class AmzTest extends BasePage {
 
 
 
-
         for (int i = 14; i < 34; i++) {
 
             try {
@@ -193,6 +192,18 @@ public class AmzTest extends BasePage {
     @AfterTest()
     public void afterTest() {
         //driver.quit();
+    }
+    @Test
+    public void denemeTest(){
+        driver.navigate().to(PropertyReader.read("Config").get("url"));
+        acceptCookies(getElement(lAcceptCookies));
+        sendKey(getInputByLocator("Suche Amazon.de"), "socken");
+        click(lSearchButton);
+        //wait.until(ExpectedConditions.elementToBeClickable(By.linkText(("Fashion"))));
+        //click(By.linkText(("Fashion")));
+        WebElement element = driver.findElement(By.xpath("(//div[@class='s-no-outline']/span)[1]"));
+        element.isEnabled();
+
     }
 
     public void sendKey(By locator, String text) {
