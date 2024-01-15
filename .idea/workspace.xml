@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest" />
+    <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699567808518</updated>
-    </task>
-    <task id="LOCAL-00007" summary="AmazonTest">
-      <created>1700042858230</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1700042858230</updated>
     </task>
     <task id="LOCAL-00008" summary="AmazonTest">
       <created>1700064142408</created>
@@ -517,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705082316082</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="AmazonTest">
+      <created>1705240025391</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1705240025391</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
