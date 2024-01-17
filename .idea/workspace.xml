@@ -64,7 +64,7 @@
       <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RunnerT70">
+  <component name="RunManager" selected="TestNG.RunnerT71">
     <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" />
@@ -159,8 +159,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RunnerT70" />
         <item itemvalue="TestNG.RunnerT71" />
+        <item itemvalue="TestNG.RunnerT70" />
         <item itemvalue="TestNG.AmzTest.denemeTest" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" />
         <item itemvalue="Cucumber Java.Scenario: Überprüfung der Amazon.de-Suchfunktion und FilterungsOptionen" />
@@ -175,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699567808518</updated>
-    </task>
-    <task id="LOCAL-00008" summary="AmazonTest">
-      <created>1700064142408</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1700064142408</updated>
     </task>
     <task id="LOCAL-00009" summary="AmazonTest">
       <created>1700065132326</created>
@@ -519,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705240025391</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="AmazonTest">
+      <created>1705329542690</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1705329542690</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
