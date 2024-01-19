@@ -20,11 +20,19 @@ public class BasePage extends BaseSteps {
 
 
 
+
+
     public void acceptCookies(WebElement element) {
 
         if (element.isDisplayed()) {
             element.click();
         }
+    }
+
+    public WebElement relocateStaleElement(WebElement element, By by)
+    {
+        return element = driver.findElement(by);
+
     }
 
     public void sleep(int num) {

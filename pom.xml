@@ -193,6 +193,7 @@
 
 
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -201,13 +202,12 @@
                 <version>2.22.2</version>
                 <configuration>
                     <includes>
-                        <include>**/Runner.java</include>
+                        <include>**/RunnerT71.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
 </project>

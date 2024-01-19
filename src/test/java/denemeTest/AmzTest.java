@@ -1,5 +1,6 @@
 package denemeTest;
 
+import lombok.Data;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -19,6 +20,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+
 
 public class AmzTest extends BasePage {
 
@@ -85,6 +88,7 @@ public class AmzTest extends BasePage {
         //Assert.assertTrue(locators.products.size()>0);
 
     }*/
+
     @Test
     public void test2() {
         driver.navigate().to(PropertyReader.read("Config").get("url"));

@@ -39,7 +39,8 @@ public class Driver {
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--remote-allow-origins=*");
                     options.addArguments("--start-maximized");
-                    //options.addArguments("user-data-dir=C:\\Users\\HaldunCabuk\\AppData\\Local\\Google\\Chrome\\User Data");
+                    //options.addArguments("--headless");
+                   // options.addArguments("user-data-dir=C:\\Users\\Haldun35\\AppData\\Local\\Google\\Chrome\\User Data");
                     drivers.set(new ChromeDriver(options));
                     break;
             }
