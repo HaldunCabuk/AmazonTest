@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/denemeTest/AmzTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
-    </list>
+    <list default="true" id="06f78456-d07c-42c6-9f91-12090ee49df4" name="Changes" comment="AmazonTest" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +62,7 @@
       <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RunnerT71">
+  <component name="RunManager" selected="TestNG.RunnerT70">
     <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" />
@@ -163,8 +157,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RunnerT71" />
         <item itemvalue="TestNG.RunnerT70" />
+        <item itemvalue="TestNG.RunnerT71" />
         <item itemvalue="TestNG.AmzTest.denemeTest" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" />
         <item itemvalue="Cucumber Java.Scenario: Überprüfung der Amazon.de-Suchfunktion und FilterungsOptionen" />
@@ -179,13 +173,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699567808518</updated>
-    </task>
-    <task id="LOCAL-00010" summary="AmazonTest">
-      <created>1700295613049</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1700295613049</updated>
     </task>
     <task id="LOCAL-00011" summary="AmazonTest">
       <created>1700776110243</created>
@@ -523,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705481984645</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="AmazonTest">
+      <created>1705658738312</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1705658738312</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
