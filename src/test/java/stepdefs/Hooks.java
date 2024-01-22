@@ -4,20 +4,22 @@ import driver.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
     @AfterStep
-    public void afterStep(Scenario scenario){
-        if (scenario.isFailed()){
+    public void afterStep(Scenario scenario) {
+        if (scenario.isFailed()) {
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
+            System.out.println("Hata alindi");
         }
     }
 
-    @After()
+    @After
     public void after() {
         Driver.quitDriver();
     }

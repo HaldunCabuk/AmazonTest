@@ -1,8 +1,11 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public interface Locators {
+
     By lAcceptCookies = By.id("sp-cc-accept");
     By lDdMenuProds = By.xpath("//div[@class='s-suggestion-container']/div");
     By lSearch = By.cssSelector("#nav-search-submit-button");

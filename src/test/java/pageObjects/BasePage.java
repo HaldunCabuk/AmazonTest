@@ -22,6 +22,7 @@ public class BasePage extends BaseSteps {
 
 
 
+
     public void acceptCookies(WebElement element) {
 
         if (element.isDisplayed()) {
