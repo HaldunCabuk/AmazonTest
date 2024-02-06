@@ -16,4 +16,3 @@ import io.cucumber.testng.CucumberOptions;
 public class RunnerT71 extends AbstractTestNGCucumberTests {
 
 }
-z
