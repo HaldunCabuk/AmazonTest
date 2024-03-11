@@ -64,7 +64,7 @@
       <recent name="C:\Users\Haldun35\IdeaProjects\AmazonTest\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RunnerT70">
+  <component name="RunManager" selected="TestNG.RunnerT71">
     <configuration name="Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sortieroptionen(ECPA-T70).feature" />
@@ -159,8 +159,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RunnerT70" />
         <item itemvalue="TestNG.RunnerT71" />
+        <item itemvalue="TestNG.RunnerT70" />
         <item itemvalue="TestNG.AmzTest.denemeTest" />
         <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" />
         <item itemvalue="Cucumber Java.Scenario: Überprüfung der Amazon.de-Suchfunktion und FilterungsOptionen" />
