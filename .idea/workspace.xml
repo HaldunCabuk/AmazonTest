@@ -50,7 +50,7 @@
     &quot;TestNG.RunnerT71.executor&quot;: &quot;Run&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Haldun35/IdeaProjects/MobilyaTigerProject&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -166,18 +166,8 @@
         <item itemvalue="TestNG.RunnerT71" />
         <item itemvalue="TestNG.RunnerT70" />
         <item itemvalue="TestNG.AmzTest.denemeTest" />
-        <item itemvalue="Cucumber Java.Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)" />
-        <item itemvalue="Cucumber Java.Scenario: Überprüfung der Amazon.de-Suchfunktion und FilterungsOptionen" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -531,7 +521,7 @@
       <option name="project" value="LOCAL" />
       <updated>1707753381761</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
