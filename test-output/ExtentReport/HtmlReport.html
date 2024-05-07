@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mai 3, 2024 05:36:12 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Mai 7, 2024 09:48:28 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -146,14 +146,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='77%'>
-                    <span class='strong'>27</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='97%'>
+                    <span class='strong'>34</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='2%'>
                     1</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='20%'>
-                    7</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -177,7 +177,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Verbesserte Suchgenauigkeit</span>
-						<span class='test-time'>Mai 3, 2024 05:36:12 PM</span>
+						<span class='test-time'>Mai 7, 2024 09:48:28 PM</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -190,7 +190,7 @@
 
 <div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 15.550</span>
+	<span class='duration right label'>00 00 20.285</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: ECPA-92 Verbesserte suchgenauigkeit(SortierOptionen)</div>
 	</div>
@@ -328,11 +328,46 @@
 
 
 		</li>
-		<li test-id='55' class='node and Fail' status='Fail'>
-			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerAbsteigendePreise())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And ich sehe verschiedene socken Produkte mit der Absteigende Preise</div>
+		<li test-id='55' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerAbsteigendePreise())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe verschiedene socken Produkte mit der Absteigende Preise</div>
 
 
-					<textarea disabled class="code-block">java.lang.AssertionError: expected [14] but found [15]
+		</li>
+		<li test-id='57' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.MyTestT70.ichKlickeAufDieOptionPreisAbsteigend())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Ich klicke auf die Option Preis: Absteigend</div>
+
+
+		</li>
+		<li test-id='59' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheDenDurchschnKundenbewertungButtonAlsSichtbar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe den Durchschn. Kundenbewertung-Button als sichtbar</div>
+
+
+		</li>
+		<li test-id='61' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.MyTestT70.ichKlickeImDropdownMenüAufDieOptionDurchschnKundenbewertung())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Ich klicke im Dropdown-Menü auf die Option Durchschn. Kundenbewertung</div>
+
+
+		</li>
+		<li test-id='63' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheErgebnissenOderVorschlägenFürSockenText())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe Ergebnissen oder Vorschlägen für socken text</div>
+
+
+		</li>
+		<li test-id='65' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheErgebnisseTitel())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe Ergebnisse Titel</div>
+
+
+		</li>
+		<li test-id='67' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerBeschreibungen())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe verschiedene socken Produkte mit der Beschreibungen</div>
+
+
+		</li>
+		<li test-id='69' class='node and Fail' status='Fail'>
+			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerAbsteigendeKundenbewertungen())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: expected [20] but found [18]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -340,12 +375,12 @@
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
 	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at pageObjects.BasePage.absteigendePrices(BasePage.java:408)
-	at stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerAbsteigendePreise(MyTestT70.java:109)
-	at ✽.ich sehe verschiedene socken Produkte mit der Absteigende Preise(file:///C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features/sortieroptionen(ECPA-T70).feature:31)
+	at pageObjects.BasePage.absteigendeBewertungen(BasePage.java:449)
+	at stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerAbsteigendeKundenbewertungen(MyTestT70.java:140)
+	at ✽.ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen(file:///C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features/sortieroptionen(ECPA-T70).feature:38)
 </textarea>
 		</li>
-		<li test-id='56' class='node * Pass' status='Pass'>
+		<li test-id='70' class='node * Pass' status='Pass'>
 			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>stepdefs.Hooks.afterStep(io.cucumber.java.Scenario)</div>
 
 
@@ -353,48 +388,6 @@
 					<div class='screenshots'>
 						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshots/embedded1.png' src='../screenshots/embedded1.png'>
 					</div>
-		</li>
-		<li test-id='57' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(stepdefs.MyTestT70.ichKlickeAufDieOptionPreisAbsteigend())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When Ich klicke auf die Option Preis: Absteigend</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='59' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheDenDurchschnKundenbewertungButtonAlsSichtbar())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sehe den Durchschn. Kundenbewertung-Button als sichtbar</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='61' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(stepdefs.MyTestT70.ichKlickeImDropdownMenüAufDieOptionDurchschnKundenbewertung())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When Ich klicke im Dropdown-Menü auf die Option Durchschn. Kundenbewertung</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='63' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheErgebnissenOderVorschlägenFürSockenText())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe Ergebnissen oder Vorschlägen für socken text</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='65' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheErgebnisseTitel())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe Ergebnisse Titel</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='67' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerBeschreibungen())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe verschiedene socken Produkte mit der Beschreibungen</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='69' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerAbsteigendeKundenbewertungen())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen</div>
-
-
-					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -457,10 +450,10 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mai 3, 2024 05:36:25 PM</td>
-										<td class='linked' test-id='55'>And ich sehe verschiedene socken Produkte mit der Absteigende Preise</td>
+										<td>Mai 7, 2024 09:48:46 PM</td>
+										<td class='linked' test-id='69'>And ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen</td>
 										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [14] but found [15]
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [20] but found [18]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -468,9 +461,9 @@
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
 	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at pageObjects.BasePage.absteigendePrices(BasePage.java:408)
-	at stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerAbsteigendePreise(MyTestT70.java:109)
-	at ✽.ich sehe verschiedene socken Produkte mit der Absteigende Preise(file:///C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features/sortieroptionen(ECPA-T70).feature:31)
+	at pageObjects.BasePage.absteigendeBewertungen(BasePage.java:449)
+	at stepdefs.MyTestT70.ichSeheVerschiedeneSockenProdukteMitDerAbsteigendeKundenbewertungen(MyTestT70.java:140)
+	at ✽.ich sehe verschiedene socken Produkte mit der Absteigende Kundenbewertungen(file:///C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features/sortieroptionen(ECPA-T70).feature:38)
 </textarea>
 										</td>
 									</tr>
@@ -514,19 +507,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mai 3, 2024 05:36:12 PM</div>
+					<div class='panel-lead'>Mai 7, 2024 09:48:28 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mai 3, 2024 05:36:28 PM</div>
+			 		<div class='panel-lead'>Mai 7, 2024 09:48:49 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 16.167</div>
+					<div class='panel-lead'>00 00 20.963</div>
 				</div>
 			</div>
 		</div>
@@ -553,19 +546,19 @@
 				skipChild: 0,
 				infoChild: 0,
 				grandChildCount: 35,
-				passGrandChild: 27,
+				passGrandChild: 34,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 7,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Verbesserte Suchgenauigkeit":15.55
+			        "Verbesserte Suchgenauigkeit":20.287
 			};
 		</script>
 		
