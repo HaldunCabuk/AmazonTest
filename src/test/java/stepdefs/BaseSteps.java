@@ -16,7 +16,6 @@ public class BaseSteps {
 
 
     {
-
         driver = Driver.getDriver();
         wait = Driver.getWait();
     }
