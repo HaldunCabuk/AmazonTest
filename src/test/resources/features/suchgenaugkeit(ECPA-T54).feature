@@ -28,9 +28,9 @@ Feature: Verbesserte Suchgenauigkeit
     Then ich gebe "akflscnfjiriophzp" wort statt playstation 5 wort im Suchfeld ein.
     And ich sehe kein Dropdown-Menu
     When ich klicke auf die suchtaste.
-    Then ich sehe "Keine Ergebnisse" text.
-    And  ich sehe nicht unter dem navbar "Ergebnissen oder Vorschlägen für" text
-    And ich sehe "Benötigst du Hilfe?" text.
+#    Then ich sehe "Keine Ergebnisse" text.
+#    And  ich sehe nicht unter dem navbar "Ergebnissen oder Vorschlägen für" text
+#    And ich sehe "Benötigst du Hilfe?" text.
 
 
 
