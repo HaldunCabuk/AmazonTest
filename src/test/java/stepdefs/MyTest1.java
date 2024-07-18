@@ -17,7 +17,7 @@ public class MyTest1 extends BaseSteps {
     @Given("ich gehe auf die Amazon.de Startseite.")
     public void ichGeheAufDieAmazonDeStartseite() {
 
-        driver.navigate().to(PropertyReader.read("Config").get("url"));
+        driver.navigate().to(PropertyReader.read().get("url"));
         bp.acceptCookies(bp.getElement(lAcceptCookies));
     }
 
