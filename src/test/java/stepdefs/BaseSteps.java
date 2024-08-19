@@ -98,6 +98,7 @@ public class BaseSteps {
     public void scrollToElement(By locator) {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         scrollToElement(element);
+
     }
 
     //Bu metod String seklinde yazilmis bir locatorun %s kismindaki textini degistirip
