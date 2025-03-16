@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Juli 18, 2024 08:51:58 AM</span>
+			<span class='label blue darken-3 suite-start-time'>März 10, 2025 12:37:43 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -146,14 +146,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='96%'>
-                    <span class='strong'>29</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='11%'>
+                    <span class='strong'>3</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='3%'>
                     1</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='84%'>
+                    22</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -176,8 +176,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>ECPA-92 Verbesserte Suchgenauigkeit</span>
-						<span class='test-time'>Juli 18, 2024 08:51:59 AM</span>
+						<span class='test-name'>Verbesserte Suchgenauigkeit</span>
+						<span class='test-time'>März 10, 2025 12:37:44 PM</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -190,9 +190,9 @@
 
 <div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 22.535</span>
+	<span class='duration right label'>00 00 17.667</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Überprüfung der Amazon.de-Suchfunktion und FilterungsOptionen</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)</div>
 	</div>
 	
 	
@@ -204,165 +204,168 @@
 
 		</li>
 		<li test-id='5' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheTitleAmazonDe())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe title Amazon.de</div>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheTitle(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe title "Amazon.de"</div>
 
 
 		</li>
-		<li test-id='7' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSchreibeImSuchfeldDerSucheAmazonDeEnthältDenTextCameraWifi())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When ich schreibe im Suchfeld der Suche Amazon.de enthält, den text camera wifi</div>
+		<li test-id='7' class='node when Fail' status='Fail'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSchreibeImSuchfeldDerEnthältDenText(java.lang.String,java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When ich schreibe im Suchfeld der "Suche Amazon.de" enthält, den text "wireless".</div>
 
 
-		</li>
-		<li test-id='9' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheDieVerschiedeneProduktenImDropdownMenuCameraWifiEnthält())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe die verschiedene Produkten im Dropdown-Menu camera wifi enthält</div>
-
-
-		</li>
-		<li test-id='11' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichKlickeAufCameraWifi())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke auf camera wifi</div>
-
-
-		</li>
-		<li test-id='13' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheErgebnissenOderVorschlägenFürCameraWifiText())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe Ergebnissen oder Vorschlägen für camera wifi text</div>
-
-
-		</li>
-		<li test-id='15' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheVerschiedeneCameraWifiProdukteMitDerBeschreibungen())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe verschiedene camera wifi Produkte mit der Beschreibungen</div>
-
-
-		</li>
-		<li test-id='17' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheVerschiedeneCameraWifiProdukteMitDerBewertungen())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe verschiedene camera wifi Produkte mit der Bewertungen</div>
-
-
-		</li>
-		<li test-id='19' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheVerschiedeneCameraWifiProdukteMitDerPreise())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe verschiedene camera wifi Produkte mit der Preise</div>
-
-
-		</li>
-		<li test-id='21' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheVerschiedeneCameraWifiProdukteMitDerLieferungInfos())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe verschiedene camera wifi Produkte mit der Lieferung infos</div>
-
-
-		</li>
-		<li test-id='23' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheDropdownMenübuttonMitDemNamenAlleAlsKlickbar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe Dropdown-Menübutton mit dem Namen Alle als klickbar</div>
-
-
-		</li>
-		<li test-id='25' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichKlickeAufAlleButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When ich klicke auf Alle button</div>
-
-
-		</li>
-		<li test-id='27' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheImDropdownMenüVerschiedeneProduktkategorienAlsKlickbar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe im Dropdown-Menü verschiedene Produktkategorien als klickbar</div>
-
-
-		</li>
-		<li test-id='29' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichKlickeImDropdownMenüAufDieOptionZeitschriften())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Ich klicke im Dropdown-Menü auf die Option Zeitschriften</div>
-
-
-		</li>
-		<li test-id='31' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheDenZeitschriftenButtonAlsKlickbar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe den Zeitschriften-Button als klickbar</div>
-
-
-		</li>
-		<li test-id='33' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichKlickeAufDieSuchtaste())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke auf die Suchtaste</div>
-
-
-		</li>
-		<li test-id='35' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheDenZeitschriftenButtonAlsKlickbar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe den Zeitschriften-Button als klickbar</div>
-
-
-		</li>
-		<li test-id='37' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheErgebnissenOderVorschlägenFürCameraWifiText())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe Ergebnissen oder Vorschlägen für camera wifi text</div>
-
-
-		</li>
-		<li test-id='39' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheErgebnisseVonAlleKategorienText())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe Ergebnisse von Alle Kategorien text</div>
-
-
-		</li>
-		<li test-id='41' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheKeineErgebnisseFürCameraWifiInZeitschriftenText())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe Keine Ergebnisse für camera wifi in Zeitschriften text</div>
-
-
-		</li>
-		<li test-id='43' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichKlickeAufDenZeitschriftenButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When ich klicke auf den Zeitschriften-Button</div>
-
-
-		</li>
-		<li test-id='45' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheImDropdownMenüVerschiedeneProduktkategorienAlsKlickbar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe im Dropdown-Menü verschiedene Produktkategorien als klickbar</div>
-
-
-		</li>
-		<li test-id='47' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichKlickeImDropdownMenüAufDieOptionBücher())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke im Dropdown-Menü auf die Option Bücher</div>
-
-
-		</li>
-		<li test-id='49' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheDenBücherButtonAlsKlickbar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe den Bücher-Button als klickbar</div>
-
-
-		</li>
-		<li test-id='51' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichKlickeAufDieSuchtaste())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When ich klicke auf die Suchtaste</div>
-
-
-		</li>
-		<li test-id='53' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheDenBücherButtonAlsKlickbar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe den Bücher-Button als klickbar</div>
-
-
-		</li>
-		<li test-id='55' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheErgebnissenOderVorschlägenFürCameraWifiText())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe Ergebnissen oder Vorschlägen für camera wifi text</div>
-
-
-		</li>
-		<li test-id='57' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheErgebnisseTitel())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe Ergebnisse Titel</div>
-
-
-		</li>
-		<li test-id='59' class='node and Fail' status='Fail'>
-			<div class="step-name" title="(stepdefs.MyTestT71.ichSeheProdukteInDenSuchergebnissenMitBezeichnungenWieBuchAusgabeOderKindleBeschreibungen())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And Ich sehe Produkte in den Suchergebnissen mit Bezeichnungen wie buch, Ausgabe oder Kindle-Beschreibungen.</div>
-
-
-					<textarea disabled class="code-block">java.lang.AssertionError: expected [3] but found [0]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at pageObjects.BasePage.checkTheInfosWithKeywords(BasePage.java:257)
-	at stepdefs.MyTestT71.ichSeheProdukteInDenSuchergebnissenMitBezeichnungenWieBuchAusgabeOderKindleBeschreibungen(MyTestT71.java:151)
-	at ✽.Ich sehe Produkte in den Suchergebnissen mit Bezeichnungen wie buch, Ausgabe oder Kindle-Beschreibungen.(file:///C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features/filterungsoption(ECPA-T71).feature:33)
+					<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@*[.='Suche Amazon.de']]['1'] (tried for 10 second(s) with 100 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.35, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\Haldun35\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61143}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61143/devtoo..., se:cdpVersion: 134.0.6998.35, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a82d11cbf9988f792d7d72d7c5b68f91
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at pageObjects.BasePage.getElement(BasePage.java:45)
+	at pageObjects.BasePage.sendKey(BasePage.java:98)
+	at stepdefs.MyTest1.ichSchreibeImSuchfeldDerEnthältDenText(MyTest1.java:33)
+	at ✽.ich schreibe im Suchfeld der "Suche Amazon.de" enthält, den text "wireless".(file:///C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature:7)
 </textarea>
 		</li>
-		<li test-id='60' class='node * Pass' status='Pass'>
+		<li test-id='8' class='node * Pass' status='Pass'>
 			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>stepdefs.Hooks.afterStep(io.cucumber.java.Scenario)</div>
 
 
-					<div class="node-step">Überprüfung der Amazon.de-Suchfunktion und FilterungsOptionen</div>
+					<div class="node-step">ECPA-92 Verbesserte suchgenauigkeit(Genauigkeit der Suche/SuchVorschläge)</div>
 					<div class='screenshots'>
 						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshots/embedded1.png' src='../screenshots/embedded1.png'>
 					</div>
+		</li>
+		<li test-id='9' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheImDropdownMenuBeginnendeProducktüberschrifften(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sehe im Dropdown-Menu "wireless" beginnende Producktüberschrifften</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='11' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheImDropdownMenuBeginnendeProducktüberschrifftenAlsKlickbar(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe im Dropdown-Menu "wireless" beginnende Producktüberschrifften als klickbar</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='13' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichKlickeAufDieSuchtaste())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When ich klicke auf die suchtaste.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='15' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheUnterDemErgebnisseHaupttitelOderProdukte(java.lang.String,java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sehe unter dem Ergebnisse haupttitel "wireless" oder "kabellos" Produkte.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='17' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheUnterDerErgebnisseTitelDieKleineFotosBeschreibungenUndKundenrezensionen())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sehe unter der Ergebnisse titel die kleine fotos, beschreibungen und Kundenrezensionen</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='19' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSollteUnterDemNavbarSehen(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sollte unter dem navbar "Ergebnissen oder Vorschlägen für" sehen.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='21' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSollteUnterDemNavbarTextSehenDazu(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sollte unter dem navbar "wireless" text sehen dazu.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='23' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheInDerMitteDerSeiteHaupttitel(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe "Ergebnisse" haupttitel.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='25' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichKlickeAufDasAmazonDeLogo())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When ich klicke auf das Amazon.de Logo.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='27' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheTitle(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sehe title "Amazon.de"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='29' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheNichtUnterDemNavbarText(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe nicht unter dem navbar "Ergebnissen oder Vorschlägen für" text</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='31' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSchreibeImSuchfeldDerEnthältDenText(java.lang.String,java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When ich schreibe im Suchfeld der "Suche Amazon.de" enthält, den text "playstation".</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='33' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheImDropdownMenuBeginnendeProducktüberschrifften(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sehe im Dropdown-Menu "playstation" beginnende Producktüberschrifften</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='35' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheImDropdownMenuBeginnendeProducktüberschrifftenAlsKlickbar(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sehe im Dropdown-Menu "playstation" beginnende Producktüberschrifften als klickbar</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='37' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichKlickeAufImDropdownMenu(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When ich klicke "playstation 5" auf im DropdownMenu.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='39' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheUnterDemErgebnisseHaupttitelOderProdukte(java.lang.String,java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich sehe unter dem Ergebnisse haupttitel "ps5" oder "playstation 5" Produkte.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='41' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSollteUnterDemNavbarSehen(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sollte unter dem navbar "Ergebnissen oder Vorschlägen für" sehen.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='43' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSollteUnterDemNavbarTextSehenDazu(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sollte unter dem navbar "playstation 5" text sehen dazu.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='45' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheInDerMitteDerSeiteHaupttitel(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe "Ergebnisse" haupttitel.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='47' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichGebeWortStattPlaystationFünfWortImSuchfeldEin(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then ich gebe "akflscnfjiriophzp" wort statt playstation 5 wort im Suchfeld ein.</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='49' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichSeheKeinDropdownMenu())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And ich sehe kein Dropdown-Menu</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='51' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(stepdefs.MyTest1.ichKlickeAufDieSuchtaste())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When ich klicke auf die suchtaste.</div>
+
+
+					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -410,7 +413,7 @@
 			<ul id='exception-collection' class='exception-collection'>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
 						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
 					</div>
 					<div class='exception-content hide'>
@@ -425,20 +428,21 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Juli 18, 2024 08:52:20 AM</td>
-										<td class='linked' test-id='59'>And Ich sehe Produkte in den Suchergebnissen mit Bezeichnungen wie buch, Ausgabe oder Kindle-Beschreibungen.</td>
+										<td>März 10, 2025 12:37:50 PM</td>
+										<td class='linked' test-id='7'>When ich schreibe im Suchfeld der "Suche Amazon.de" enthält, den text "wireless".</td>
 										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [3] but found [0]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at pageObjects.BasePage.checkTheInfosWithKeywords(BasePage.java:257)
-	at stepdefs.MyTestT71.ichSeheProdukteInDenSuchergebnissenMitBezeichnungenWieBuchAusgabeOderKindleBeschreibungen(MyTestT71.java:151)
-	at ✽.Ich sehe Produkte in den Suchergebnissen mit Bezeichnungen wie buch, Ausgabe oder Kindle-Beschreibungen.(file:///C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features/filterungsoption(ECPA-T71).feature:33)
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@*[.='Suche Amazon.de']]['1'] (tried for 10 second(s) with 100 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.35, chrome: {chromedriverVersion: 134.0.6998.35 (ea6ef4c2ac15..., userDataDir: C:\Users\Haldun35\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61143}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61143/devtoo..., se:cdpVersion: 134.0.6998.35, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a82d11cbf9988f792d7d72d7c5b68f91
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at pageObjects.BasePage.getElement(BasePage.java:45)
+	at pageObjects.BasePage.sendKey(BasePage.java:98)
+	at stepdefs.MyTest1.ichSchreibeImSuchfeldDerEnthältDenText(MyTest1.java:33)
+	at ✽.ich schreibe im Suchfeld der "Suche Amazon.de" enthält, den text "wireless".(file:///C:/Users/Haldun35/IdeaProjects/AmazonTest/src/test/resources/features/suchgenaugkeit(ECPA-T54).feature:7)
 </textarea>
 										</td>
 									</tr>
@@ -476,25 +480,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>30</div>
+					<div class='panel-lead'>26</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Juli 18, 2024 08:51:58 AM</div>
+					<div class='panel-lead'>März 10, 2025 12:37:43 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Juli 18, 2024 08:52:21 AM</div>
+			 		<div class='panel-lead'>März 10, 2025 12:38:02 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 23.288</div>
+					<div class='panel-lead'>00 00 18.370</div>
 				</div>
 			</div>
 		</div>
@@ -520,20 +524,20 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 30,
-				passGrandChild: 29,
+				grandChildCount: 26,
+				passGrandChild: 3,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 22,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "ECPA-92 Verbesserte Suchgenauigkeit":22.535
+			        "Verbesserte Suchgenauigkeit":17.667
 			};
 		</script>
 		
